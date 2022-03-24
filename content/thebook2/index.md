@@ -3,9 +3,6 @@ id: 192
 title: Deductive Software Verification &#8211; The KeY Book
 date: '2016-12-07T17:27:58+01:00'
 author: 'Richard Bubel'
-menu:
-  main:
-    title: "The Book"
 ---
 
 <small>From Theory to Practice</small>

@@ -4,10 +4,6 @@ title: 'Getting Started'
 date: '2017-10-09T13:30:38+01:00'
 author: 'Dominic Steinhöfel'
 layout: page
-menu:
-  main:
-    title: "Getting Started & Support"
-    weight: 10
 ---
 
 ### Download KeY
@@ -60,3 +56,4 @@ Be sure to tag your question with the
 <kbd>key-formal-verification</kbd> tag, so that your question is not
 lost amongst all the questions on StackOverflow. Alternatively, you
 can write an email to our mailing list support@key-project.org.
+
