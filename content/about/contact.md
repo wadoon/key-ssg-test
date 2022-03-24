@@ -4,9 +4,6 @@ title: Contact
 date: '2016-11-30T17:16:07+01:00'
 author: 'Dominic Steinhöfel'
 layout: page
-guid: 'http://key-project.se.informatik.tu-darmstadt.de/?page_id=253'
-ampforwp-amp-on-off:
-    - default
 ---
 
 <div class="row"><div class="col-md-4">## Karlsruhe Group

@@ -3,10 +3,6 @@ id: 480
 title: '(Symbolic) Debugging'
 date: '2016-12-08T10:30:33+01:00'
 author: 'Dominic Steinhöfel'
-layout: page
-guid: 'http://key-project.se.informatik.tu-darmstadt.de/?page_id=480'
-ampforwp-amp-on-off:
-    - default
 ---
 
 <div class="row"><div class="col-md-3 col-md-push-9"><div class="no_bullets" id="toc_container">Contents

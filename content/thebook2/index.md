@@ -1,21 +1,16 @@
 ---
 id: 192
-title: 'Deductive Software Verification &#8211; The KeY Book<br /><small>From Theory to Practice</small>'
+title: Deductive Software Verification &#8211; The KeY Book
 date: '2016-12-07T17:27:58+01:00'
 author: 'Richard Bubel'
-layout: page
-guid: 'http://key-project.se.informatik.tu-darmstadt.de/?page_id=192'
-ampforwp-amp-on-off:
-    - default
-ampforwp_custom_content_editor:
-    - ''
-ampforwp_custom_content_editor_checkbox:
-    - ''
-ampforwp_custom_sidebar_select:
-    - none
+menu:
+  main:
+    title: "The Book"
 ---
 
-<div class="row"><div class="col-md-3 col-md-push-9" style="v-align: top;"><div class="no_bullets" id="toc_container">Contents
+<small>From Theory to Practice</small>
+
+Contents
 
 - [Table of Contents \[preprint\]](#Table_of_Contents_preprint)
 - [Errata (found after publishing)](#Errata_found_after_publishing)
@@ -23,7 +18,6 @@ ampforwp_custom_sidebar_select:
 - [Examples from the book](#Examples_from_the_book)
 - [Technical report on first-order logic](#Technical_report_on_first-order_logic)
 
-</div><center>  
 [<span class="glyphicon glyphicon-download-alt"></span> **Available at Springer**](http://link.springer.com/book/10.1007%2F978-3-319-49812-6)</center></div><div class="col-md-9 col-md-pull-3">![bookcover](/uploads/2016/11/BookCover-197x300.jpg)<div class="lead">The new book covers deductive software verification as realised by the KeY approach. It constitutes the ultimate source for the KeY tool since version 2.x.
 
 It also features a general (not KeY specific) chapter on the Java Modeling Language which provides a thorough introduction into the specification language.
@@ -80,33 +74,32 @@ Preprints are in many cases available on the author’s websites and linked from
 
 ### <span id="Errata_found_after_publishing">Errata (found after publishing)</span>
 
-**page 44, Figure 2.9** Missing closing parenthesis. The correct version is   
+* **page 44, Figure 2.9** Missing closing parenthesis. The correct version is   
 ε(o<sub>1</sub>, f<sub>1</sub>, singleton(o<sub>2</sub>, f<sub>2</sub>)), ε(o<sub>1</sub>, f<sub>1</sub>, allFields(o<sub>2</sub>)), and ε(o<sub>1</sub>, f<sub>1</sub>,allObjects(f<sub>2</sub>))
 
-**page 30, Figure 2.2**  
+
+* **page 30, Figure 2.2**  
 *The correct version of the rule eqRight should read:*  
  *![](https://www.key-project.org/wp-content/uploads/2017/04/Erratum_1_crop.png)*
 
-**page 202, Example 7.6**  
+* **page 202, Example 7.6**  
 The sentence says  
 "To specify that a method returns the index of an integer array arr holding the maximum entry, we can write the following postcondition,"   
 but should say   
 “... the maximum element of an integer array arr.”
 
-**page 269, Definition 8.3**  
+* **page 269, Definition 8.3**  
 The defined tuple *(pre, var, dep)* must read *(pre, term, dep)* to be consistent with the text. *var* was short for variant, and *term* stands for termination witness.
 
-**page 321, Section 9.3.1 right before Listing 9.8**  
+* **page 321, Section 9.3.1 right before Listing 9.8**  
 The last occurrence of `accessible` before Listing 9.8 must read `assignable`.
 
-**page 554, Section 16.3.7 (Proving Termination)**  
+* **page 554, Section 16.3.7 (Proving Termination)**  
 In the second branch ("body preserves invariant") of the loop rule near the bottom of the page the part `d>d'` in the formula should read `d<d'` instead.
 
 ### <span id="KeY_version_from_the_book">KeY version from the book</span>
 
-The KeY Book describes KeY as in version KeY 2.6.1.  
-[Download and additional instructions](/download/)  
-are available [here](/download/).
+The KeY Book describes KeY as in version KeY 2.6.1. [Download and additional instructions](/download/) are available [here](/download/).
 
 ### <span id="Examples_from_the_book">Examples from the book</span>
 
@@ -118,4 +111,3 @@ On page 157 of the KeY book the reader is
 referred to a technical report on first-order logic for further details. This report may be downloaded  
 [here.](https://www.key-project.org/wp-content/uploads/2017/03/FOLTR.pdf)
 
-</div></div>
