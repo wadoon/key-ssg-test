@@ -7,8 +7,8 @@ canonifyurls  = true
 
 DefaultContentLanguage = "en"
 #theme = "beautifulhugo"
-#theme = "Lanyon"
 #theme = "slick"
+theme = "ananke"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
