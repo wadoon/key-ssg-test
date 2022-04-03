@@ -4,6 +4,7 @@ date: '2016-12-08T10:29:53+01:00'
 author: 'Dominic Steinhöfel'
 ---
 
+<!--
  Traditionally, KeY was a program verification tool for Java. Although
  this still is one of its main applications, it **grew over the years
  to a program verification platform with various fields of
@@ -21,3 +22,4 @@ author: 'Dominic Steinhöfel'
  in the backend of another tool. Ongoing work includes, for instance,
  the construction of a Java compiler based on symbolic execution trees
  created by KeY.
+-->

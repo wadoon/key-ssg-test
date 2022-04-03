@@ -4,6 +4,7 @@ date: '2021-12-23T17:59:59+01:00'
 author: 'Wolfram Pfeifer'
 ---
 
+
 The core feature of KeY is a theorem prover for Java Dynamic Logic
 based on a sequent calculus. It allows for full functional
 verification of sequential Java (without floats, garbage collection

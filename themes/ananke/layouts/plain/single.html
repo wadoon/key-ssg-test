@@ -1,0 +1,11 @@
+{{ define "header" }}
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+  <header>
+    <div class="{{ .Site.Params.background_color_class | default "bg-black" }}">
+      {{ partial "site-navigation.html" . }}
+    </div>
+  </header>
+{{ end }}
+{{ define "main" }}
+{{ .Content }}
+{{ end }}

@@ -17,7 +17,8 @@ pygmentCodeFences = true
 
 [Params]
   subtitle = "Deductive Verification for Java Programs"
-#  logo = "img/key-logo.png"
+  #text_color = "green"
+  site_logo = "img/favicon.png"
   favicon = "img/favicon.png"
   dateFormat = "January 2, 2006"
   commit = true
@@ -25,6 +26,13 @@ pygmentCodeFences = true
   comments = false
   #  gcse = "012345678901234567890:abcdefghijk"
   # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+
+[aParams.ananke_socials]
+   name= "github"
+    url="https://github.com/theNewDynamic"
+    label="TND GitHub Account"
+    color='#ff6800'
+
 
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
