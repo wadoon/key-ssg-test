@@ -7,5 +7,10 @@
   </header>
 {{ end }}
 {{ define "main" }}
-{{ .Content }}
+  {{ .Content }}
+
+  {{ range .Pages }}
+{{ .Render "summary"}}
+{{ end }}
+
 {{ end }}
