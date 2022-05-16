@@ -11,6 +11,10 @@ categories:
     - Announcement
 ---
 
- A years long effort comes to a successful conclusion. On December, 20th the new KeY book became available [online](http://www.springer.com/978-3-319-49811-9). Most of the book’s content is new or largely rewritten compared to the first KeY Book.
+A years long effort comes to a successful conclusion. On December,
+20th the new KeY book became available
+[online](http://www.springer.com/978-3-319-49811-9). Most of the
+book’s content is new or largely rewritten compared to the first KeY
+Book.
 
- Go [here for more information and supplementary material](/thebook/).
+Go [here for more information and supplementary material](/thebook/).

@@ -1,5 +1,7 @@
 ---
-title: 'A Program Logic For Dependence Analysis (Reviewers only)'
+title: 'A Program Logic For Dependence Analysis'
+aliases:
+  - '/a-program-logic-for-dependence-analysis-reviewers-only/'
 date: '2019-07-05T11:08:44+01:00'
 author: 'Richard Bubel'
 ---
@@ -8,8 +10,7 @@ This page contains the KeY version used for the evaluation as well as
 an archive with the
 [examples](https://www.key-project.org/wp-content/uploads/2019/07/Examples.zip).
 
-- [KeY
-  distribution](https://www.key-project.org/wp-content/uploads/2019/07/key-2.7_21922ea4bda81e9515d1cbd01d04f2091992204d.zip):
+- [KeY distribution](https://www.key-project.org/wp-content/uploads/2019/07/key-2.7_21922ea4bda81e9515d1cbd01d04f2091992204d.zip):
   You need Java 12 to run this version of KeY
 - [Examples](https://www.key-project.org/wp-content/uploads/2019/07/Examples.zip)
 

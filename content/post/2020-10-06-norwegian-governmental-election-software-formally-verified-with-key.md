@@ -1,21 +1,13 @@
 ---
-id: 2606
 title: 'Norwegian Governmental Election Software Formally Verified with KeY'
 date: '2020-10-06T13:24:06+01:00'
 author: 'Dominic Steinhöfel'
 excerpt: 'In his recently finished Master''s thesis, Henrik Torland Klev verified (parts of) EVA, the main support system for elections in municipalities and counties in Norway, using the KeY prover.'
 layout: post
-guid: 'https://www.key-project.org/?p=2606'
 permalink: /2020/10/06/norwegian-governmental-election-software-formally-verified-with-key/
 image: /wp-content/uploads/2017/02/key-applications.png
-categories:
-    - 'Case Study'
-    - 'Users of KeY'
 tags:
-    - case-study
-    - e-voting
-    - norway
-    - verification
+    - 'Case Study'
 ---
 
 In his [recently finished Master’s thesis](https://www.duo.uio.no/handle/10852/79576?show=full), Henrik Torland Klev verified (parts of) EVA, the *main support system for elections in municipalities and counties in Norway*, using the KeY prover.

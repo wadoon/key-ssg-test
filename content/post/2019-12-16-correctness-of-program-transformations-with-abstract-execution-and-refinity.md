@@ -1,23 +1,11 @@
 ---
-id: 2421
 title: 'Proving the Correctness of Program Transformations with Abstract Execution and REFINITY'
 date: '2019-12-16T13:48:00+01:00'
 author: 'Dominic Steinhöfel'
-layout: post
-guid: 'https://www.key-project.org/?p=2421'
 permalink: /2019/12/16/correctness-of-program-transformations-with-abstract-execution-and-refinity/
 image: /wp-content/uploads/2020/03/refinity-teaser-1024x460-1.png
-categories:
-    - Uncategorized
 tags:
-    - 'Abstract Execution'
-    - Refactoring
-    - REFINITY
-    - 'Relational Verification'
-    - Second-Order
-    - 'symbolic execution'
     - Tool
-    - verification
 ---
 
 Summary. *Abstract Execution* (AE) is a new program analysis technique for *automatically proving second-order properties* about programs. It is based on the symbolic *execution* of *abstract* programs with second-order symbolic stores.

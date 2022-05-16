@@ -50,19 +50,19 @@ Microsoft Windows.
   loading you may inspect the finished proof. To keep things simple
   the unpacked proof files should be placed in the same directory as
   Goodstein.java.
-- The [technical report](/wp-content/uploads/2017/06/Ord.pdf) contains
+- The [technical report](Ord.pdf) contains
   more material than could be covered in the page resticted paper.
 - The program correctness proofs use a number of lemmas on ordinals,
   the embedding of positive integers into ordinals, and termination
   functions introduced for Goodstein sequences. Proofs of these lemmas
   are contained in the zip-files
-  [OrdProofs1](/wp-content/uploads/2017/06/OrdProofs1.zip)
-  [OrdProofs2](/wp-content/uploads/2017/06/OrdProofs2.zip)
-  [OrdProofs3](/wp-content/uploads/2017/06/OrdProofs3.zip)
+  [OrdProofs1](OrdProofs1.zip)
+  [OrdProofs2](OrdProofs2.zip)
+  [OrdProofs3](OrdProofs3.zip)
   respectively. The files in these zip-archives use KeY internal
   names. The correspondence between the lemma whose proof you want to
   inspect and the name of the proof file can be retrieved from
-  [Fml2Taclet](/wp-content/uploads/2017/06/Fml2Taclets.pdf).
+  [Fml2Taclet](Fml2Taclets.pdf).
   To inspect the proofs, start the KeY system and select in the
   pull-down menue “file” subitem “load” the wanted proof file. Proof
   files come with extensions .key or .proof. The user will not note
