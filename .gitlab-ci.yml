@@ -47,7 +47,7 @@ pages:
    - tud  
   script:
   - hugo
-  - scp -pr public/* ${SECRET_USER}@${HOST}:${REMOTE_FOLDER}
+  - scp -vpr public/* ${SECRET_USER}@${HOST}:${REMOTE_FOLDER}
   artifacts:
     paths:
     - public
