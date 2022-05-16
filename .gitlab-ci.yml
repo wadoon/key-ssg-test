@@ -41,6 +41,8 @@ test:
   - master
 
 pages:
+  tags: 
+   - tud  
   script:
   - hugo
   - scp -pr public/* ${SECRET_USER}@${HOST}:${REMOTE_FOLDER}
