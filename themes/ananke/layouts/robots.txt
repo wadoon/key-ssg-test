@@ -2,10 +2,13 @@ User-agent: linkcheck
 Disallow:
 
 User-agent: *
-# robotstxt.org - if ENV production variable is false robots will be disallowed.
-{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
 Allow: /
 Sitemap: {{.Site.BaseURL}}/sitemap.xml
-{{ else }}
-Disallow: /
-{{ end }}
+
+# robotstxt.org - if ENV production variable is false robots will be disallowed.
+# {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+# Allow: /
+# Sitemap: {{.Site.BaseURL}}/sitemap.xml
+# {{ else }}
+# Disallow: /
+# {{ end }}
