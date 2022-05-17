@@ -56,7 +56,17 @@ pages:
   - master
 
 
-
-
-
-
+linkcheck:
+  needs: ["pages"]
+  image: wadoon/key-test-docker:docs
+  tags:
+    - tud
+#  rules:
+    # only execute if triggered by cronjob, to not trigger on pushes
+#    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+    - linkchecker -F html -t 5 --no-robots https://key-project.org/hugo/ || true
+    - ls *html
+    - scp -pr linkchecker-out.html ${SECRET_USER}@${HOST}:${REMOTE_FOLDER}
+  only:
+  - master
