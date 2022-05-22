@@ -31,6 +31,7 @@ https://gist.github.com/rindPHI/70b9a4b2ee3159f4f55f59ea2198637a
 ## Relevant blog posts
 
 [![](https://www.key-project.org/wp-content/uploads/2017/02/key-applications-150x150.png)](https://www.key-project.org/2017/02/20/successful-usage-of-key/)
+
 [How researchers from UPM and IMDEA used KeY as
 backend](https://www.key-project.org/2017/02/20/successful-usage-of-key/)
 - Researchers (Julio Mariño Raúl, N. N. Alborodo, Lars-Åke Fredlund

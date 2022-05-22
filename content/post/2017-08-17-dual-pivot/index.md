@@ -25,15 +25,13 @@ algorithm implementation is correct. However, a loop invariant which
 is annotated to the source code does not hold. This post reports on
 the successful case study in which KeY was applied to a non-trivial
 real-world implementation of a non-trivial algorithm. [**Please find
-all details in the
-paper.**](https://formal.iti.kit.edu/biblio/?lang=en&key=BeckertSchifflEA2017)
+all details in the paper.**](https://formal.iti.kit.edu/biblio/?lang=en&key=BeckertSchifflEA2017)
 
 ## Target of the Verification Task
 
 ### Algorithm
 
-![Illustration of a dual pivot
-partition](/wp-content/uploads/2017/08/dual-pivot-quicksort.png)
+![Illustration of a dual pivot partition](dual-pivot-quicksort.png)
 
 While the
 worst-case runtime complexity of comparison-based sorting algorithms
@@ -81,22 +79,18 @@ of our correctness proof. ## Verification Task
 
 ### Toplevel Specification
 
-<style>
-pre.java .keyword { color: darkblue; }
-</style>
-
-```
-<pre class="java"><span class="keyword">class</span> DualPivotQuicksort {
+```java
+class DualPivotQuicksort {
  // ...
  
- /*@ <span class="keyword">public normal_behavior</span>
-   @ <span class="keyword">ensures</span> (<span class="keyword">\forall int</span> i; 0 <= i && i < a.<span class="keyword">length</span>;
-   @          (\<span class="keyword">forall int</span> j; 0 < j && j < a.<span class="keyword">length</span>; 
+ /*@ public normal_behavior
+   @ ensures (\forall int i; 0 <= i && i < a.length;
+   @          (\forall int j; 0 < j && j < a.length; 
    @           i < j ==> a[i] <= a[j]));
-   @ <span class="keyword">ensures</span> \seqPerm(\array2seq(a), \old(\array2seq(a)));
-   @ <span class="keyword">assignable</span> a[*]; 
+   @ ensures \seqPerm(\array2seq(a), \old(\array2seq(a)));
+   @ assignable a[*]; 
    @*/
- <span class="keyword">void</span> sort(<span class="keyword">int</span>[] a) { ... }
+ void sort(int[] a) { ... }
 }
 ```
 
@@ -127,21 +121,24 @@ the requirement specification
 
 ## Annotated Sources and Proof Files
 
-**Sortedness Property:**- [DualPivotQuicksort\_sort.java](/wp-content/uploads/2017/08/DualPivotQuicksort_sort.java)
-- [SwapValues\_sort.java](/wp-content/uploads/2017/08/SwapValues_sort.java)
-- [SinglePivotPartition\_sort.java](/wp-content/uploads/2017/08/SinglePivotPartition_sort.java)
+**Sortedness Property:**- [DualPivotQuicksort\_sort.java](DualPivotQuicksort_sort.java)
+- [SwapValues\_sort.java](SwapValues_sort.java)
+- [SinglePivotPartition\_sort.java](SinglePivotPartition_sort.java)
 
-**Permutation Property:**- [DualPivotQuicksort\_perm.java](/wp-content/uploads/2017/08/DualPivotQuicksort_perm.java)
-- [SwapValues\_perm.java](/wp-content/uploads/2017/08/SwapValues_perm.java)
-- [SinglePivotPartition\_perm.java](/wp-content/uploads/2017/08/SinglePivotPartition_perm.java)
+**Permutation Property:**- [DualPivotQuicksort\_perm.java](DualPivotQuicksort_perm.java)
+- [SwapValues\_perm.java](SwapValues_perm.java)
+- [SinglePivotPartition\_perm.java](SinglePivotPartition_perm.java)
 
-**Integer Overflow:**- [](/wp-content/uploads/2017/08/SinglePivotParition_overflow.java)[DualPivotQuicksort\_overflow.java](/wp-content/uploads/2017/08/DualPivotQuicksort_overflow.java)[](/wp-content/uploads/2017/08/SinglePivotParition_overflow.java)
-- [SinglePivotParition\_overflow.java](/wp-content/uploads/2017/08/SinglePivotParition_overflow.java)
-- [DualPivotQuicksort\_CBMC.java](/wp-content/uploads/2017/08/DualPivotQuicksort_CBMC.java):This file was proved via the software bounded model checker [CBMC](http://www.cprover.org/cbmc/).
+**Integer Overflow:**- [](SinglePivotParition_overflow.java)[DualPivotQuicksort\_overflow.java](DualPivotQuicksort_overflow.java)[](SinglePivotParition_overflow.java)
+- [SinglePivotParition\_overflow.java](SinglePivotParition_overflow.java)
+- [DualPivotQuicksort\_CBMC.java](DualPivotQuicksort_CBMC.java)
+ 
+ :This file was proved via the software bounded model checker [CBMC](http://www.cprover.org/cbmc/).
 
-**ZIP files with all sources and proofs:**- [](/wp-content/uploads/2017/08/DualPivot_KeY_Proofs.zip)all source: [DualPivot\_KeY\_Sources.zip](/wp-content/uploads/2018/03/DualPivot_KeY_Sources.zip)
-- all files: [DualPivot\_KeY\_Proofs.zip](/wp-content/uploads/2017/08/DualPivot_KeY_Proofs.zip)
-- employed KeY version: [key-2.7\_9c003....zip](/wp-content/uploads/2017/08/key-2.7_9c003bb729fff7c922d356f50f89bff669d8a8da.zip)
+**ZIP files with all sources and proofs:**- [](DualPivot_KeY_Proofs.zip) 
+  all source: [DualPivot\_KeY\_Sources.zip](/wp-content/uploads/2018/03/DualPivot_KeY_Sources.zip)
+- all files: [DualPivot\_KeY\_Proofs.zip](DualPivot_KeY_Proofs.zip)
+- employed KeY version: [key-2.7\_9c003....zip](key-2.7_9c003bb729fff7c922d356f50f89bff669d8a8da.zip)
 
 ## Extension: Pair Insertion Sort
 
@@ -154,5 +151,5 @@ algorithm has been put forth at the VerifyThis competition 2017.
 Michael Kirsten carried out a verification of the actual
 implementation using KeY.
 
-- [PairInsertionSort\_sort](/wp-content/uploads/2017/08/PairInsertionSort.java)
-- [PairInsertionSort\_sort\_proof](/wp-content/uploads/2017/08/PairInsertionSort_sort_proof.zip)
+- [PairInsertionSort\_sort](PairInsertionSort.java)
+- [PairInsertionSort\_sort\_proof](PairInsertionSort_sort_proof.zip)

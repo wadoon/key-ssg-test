@@ -2,10 +2,6 @@
 title: 'KeY-SED Successfully Applied in an Industrial Setting'
 date: '2018-02-13T16:01:30+01:00'
 author: 'Dominic Steinhöfel'
-permalink: /2018/02/13/keys-sed-successfully-applied-in-an-industrial-setting/
-image: /wp-content/uploads/2018/02/key-appl-sed.png
-categories:
-    - 'Users of KeY'
 tags:
     - 'Case Study'
     - SED
@@ -20,8 +16,8 @@ tags:
  useful for applying Symbolic Execution techniques as visual feedback
  is given to the developer”.
 
-  If you are interested in this practical perspective of using formal
-  methods, you can find [Aniket's article on ACM
-  DL](https://dl.acm.org/citation.cfm?id=3172885). More information on
-  the SED is available in the [Symbolic
-  Debugging](/applications/debugging/) section on our website.
+If you are interested in this practical perspective of using formal
+methods, you can find [Aniket's article on ACM
+DL](https://dl.acm.org/citation.cfm?id=3172885). More information on
+the SED is available in the [Symbolic
+Debugging](/applications/debugging/) section on our website.

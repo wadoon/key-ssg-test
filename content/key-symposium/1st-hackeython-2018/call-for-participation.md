@@ -52,9 +52,8 @@ ends the next day, **Fri Dec. 7th, 2018 at** (approximately) **4:00
 p.m**.
 
 (Changes to) deadlines, general announcements etc. will be published
-via the [HacKeYthon web
-page](https://www.key-project.org/1st-hackeython-2018/). Please check
-the page regularly to be up to date.
+via the [HacKeYthon web page](/key-symposium/1st-hackeython-2018/).
+Please check the page regularly to be up to date.
 
 There will be a **student award for excellent contributions** during
 the HacKeYthon. The receiver of the award is chosen by the

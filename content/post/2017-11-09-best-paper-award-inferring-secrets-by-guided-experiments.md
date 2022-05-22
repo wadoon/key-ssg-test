@@ -2,8 +2,6 @@
 title: 'Best Paper Award: "Inferring Secrets by Guided Experiments"'
 date: '2017-11-09T10:28:41+01:00'
 author: 'Richard Bubel'
-permalink: /2017/11/09/best-paper-award-inferring-secrets-by-guided-experiments/
-image: /wp-content/uploads/2017/02/key-applications.png
 tags:
   - 'Best Paper'
 ---

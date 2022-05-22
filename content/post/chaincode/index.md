@@ -1,10 +1,7 @@
 ---
-id: 2345
 title: 'Proving the Correctness of Hyperledger Fabric Chaincode in KeY'
 date: '2019-11-11T18:22:13+01:00'
 author: 'Mattias Ulbrich'
-layout: page
-guid: 'https://www.key-project.org/?page_id=2345'
 ---
 
 Smart contracts are programs that run on distributed ledger platforms,
@@ -39,7 +36,7 @@ that yields itself usefully to deductive program verification, and we
 discuss different types of correctness properties of smart contracts,
 and how to verify them.
 
-[Preprint](https://www.key-project.org/wp-content/uploads/2019/11/sc-verification.pdf)
+[Preprint](sc-verification.pdf)
 
 The paper has been published in LNCS, available at springerlink.
 
@@ -47,13 +44,13 @@ The paper has been published in LNCS, available at springerlink.
 
 #### Extended KeY version
 
-[key-2.7\_2d2a68348e607ba00900a9ecfaee13afec14c614-exe.jar](https://www.key-project.org/wp-content/uploads/2019/11/key-2.7_2d2a68348e607ba00900a9ecfaee13afec14c614-exe.jar)
+* [key-2.7\_2d2a68348e607ba00900a9ecfaee13afec14c614-exe.jar](key-2.7_2d2a68348e607ba00900a9ecfaee13afec14c614-exe.jar)
 
 #### Java Source Files
 
-[Java source files](https://www.key-project.org/wp-content/uploads/2019/11/java-sources.zip)
+* [Java source files](java-sources.zip)
 
 #### Proofs
 
-[createPlayer.proof](https://www.key-project.org/wp-content/uploads/2019/11/createPlayer.proof)  
-[evaluate.proof](https://www.key-project.org/wp-content/uploads/2019/11/evaluate.proof)
+* [createPlayer.proof](createPlayer.proof)
+* [evaluate.proof](evaluate.proof)

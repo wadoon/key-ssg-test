@@ -2,10 +2,6 @@
 title: 'KeY talk at the British Computer Society'
 date: '2016-12-19T10:41:23+01:00'
 author: 'Dominic Steinhöfel'
-layout: post
-guid: 'http://key-project.se.informatik.tu-darmstadt.de/?p=618'
-permalink: /2016/12/19/key-talk-at-the-british-computer-society/
-image: /wp-content/uploads/2016/12/Reiner-1.jpeg
 categories:
     - Talks
 ---

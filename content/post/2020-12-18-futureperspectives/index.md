@@ -1,33 +1,42 @@
 ---
-id: 2636
 title: 'The new book has arrived!'
 date: '2020-12-18T14:08:27+01:00'
 author: 'Mattias Ulbrich'
 excerpt: 'Just in time for the holiday season, the new book has arrived.'
-layout: post
-guid: 'https://www.key-project.org/?p=2636'
-permalink: /2020/12/18/futureperspectives/
-image: /wp-content/uploads/2020/12/bookFuturePerspectives.png
-categories:
+tags:
     - Announcement
 ---
 
 Just in time for the holiday season, the new book has arrived.
 
-The LNCS volume 12345\* “Deductive Software Verification: Future Perspectives” contains a collection of articles <span class="aCOpRe"><span>–</span></span> reflections on the occasion of 20 years of KeY.
+The LNCS volume 12345\* “Deductive Software Verification: Future
+Perspectives” contains a collection of articles – reflections on the
+occasion of 20 years of KeY.
 
-An account of the history of KeY is contained amongst a collection of articles on *Verification Tools*, *Contracts*, the *Feasibility and Usability* and *Integration of Verification Techniques*. The articles have been written by leading experts in the field and are not necessarily directly concerned with the KeY verification tool. They give insights to future perspectives in deductive software verification.
+An account of the history of KeY is contained amongst a collection of
+articles on *Verification Tools*, *Contracts*, the *Feasibility and
+Usability* and *Integration of Verification Techniques*. The articles
+have been written by leading experts in the field and are not
+necessarily directly concerned with the KeY verification tool. They
+give insights to future perspectives in deductive software
+verification.
 
-The book is now available at [Springer](https://www.springer.com/978-3-030-64353-9).
+The book is now available at
+[Springer](https://www.springer.com/978-3-030-64353-9).
 
 Many thanks to all authors for their high-quality contributions!
 
-<sup>\_\_\_\_\_\_\_\_\_\_\_\_  
-</sup>\* No! 12345 is not a placeholder number. It is the actual number of the volume. Pretty cool, isn't it.
+------
 
-- - - - - -
+No! 12345 is not a placeholder number. It is the actual number of the
+volume. Pretty cool, isn't it.
 
-<div class="wp-block-image"><figure class="aligncenter size-full">[![](https://www.key-project.org/wp-content/uploads/2020/12/bookFuturePerspectivesLarge.png)](https://link.springer.com/book/10.1007%2F978-3-030-64354-6)</figure></div>## Table of Contents
+-----
+
+
+[![](bookFuturePerspectivesLarge.png)](https://link.springer.com/book/10.1007%2F978-3-030-64354-6)
+
+## Table of Contents
 
 ### History
 

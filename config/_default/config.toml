@@ -15,6 +15,11 @@ pygmentCodeFences = true
 #disqusShortname = "XXX"
 #googleAnalytics = "XXX"
 
+
+[permalinks]
+  posts = '/:year/:month/:title/'
+
+
 [Params]
   subtitle = "Deductive Verification for Java Programs"
   #text_color = "green"

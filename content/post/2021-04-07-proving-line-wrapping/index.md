@@ -3,8 +3,6 @@ id: 2882
 title: 'Proving Line Wrapping in KeY, Why3, Dafny and Frama-C'
 date: '2021-04-07T12:17:07+01:00'
 author: 'Mattias Ulbrich'
-layout: post
-guid: 'https://www.key-project.org/?p=2882'
 permalink: /2021/04/07/proving-line-wrapping/
 categories:
     - 'Case Study'
