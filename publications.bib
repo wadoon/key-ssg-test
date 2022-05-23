@@ -1,5 +1,38 @@
-% This file was created with teachPress 8.1.5
-% Encoding: Cp1252
+% Encoding: UTF-8
+@STRING{lnai = "LNAI"}
+@STRING{lncs = "LNCS"}
+
+
+@STRING{spv = "Springer"}
+@article{MostowskiU16,
+title = {Dynamic Dispatch for Method Contracts Through Abstract Predicates},
+author = {Wojciech Mostowski and Mattias Ulbrich},
+url = {http://dx.doi.org/10.1007/978-3-319-46969-0_7},
+doi = {10.1007/978-3-319-46969-0_7},
+year  = {2016},
+date = {2016-01-01},
+journal = {Trans. Modularity and Composition},
+volume = {1},
+pages = {238--267},
+crossref = {DBLP:journals/taosd/2016-1},
+keywords = {Verification},
+pubstate = {published},
+tppubtype = {article}
+}
+@inproceedings{nfm2014JKelloy,
+title = {JKelloy: A Proof Assistant for Relational Specifications of Java Programs},
+author = {Aboubakr Achraf El Ghazi and Mattias Ulbrich and Christoph Gladisch and Shmuel Tyszberowicz and Mana Taghdiri},
+url = {http://dx.doi.org/10.1007/978-3-319-06200-6_13},
+doi = {10.1007/978-3-319-06200-6_13},
+year  = {2014},
+date = {2014-01-01},
+booktitle = {NASA Formal Methods - 6th International Symposium, NFM 2014, Houston, TX, USA, April 29 - May 1, 2014. Proceedings},
+pages = {173--187},
+crossref = {DBLP:conf/nfm/2014},
+keywords = {Verification},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
 
 @article{LanzingerWeiglUlbrich2021_1000139256,
 title = {Scalability and Precision by Combining Expressive Type Systems and Deductive Verification},
@@ -355,17 +388,17 @@ keywords = {theorem proving},
 pubstate = {published},
 tppubtype = {inproceedings}
 }
-@inproceedings{BeckertEtAl2017a,
-title = {Proving JDK's Dual Pivot Quicksort Correct},
-author = {Bernhard Beckert and Jonas Schiffl and Peter H. Schmitt and Mattias Ulbrich},
-url = {https://formal.iti.kit.edu/biblio/?lang=en\&key=BeckertEtAl2017a},
-year  = {2017},
-date = {2017-07-22},
-booktitle = {9th Working Conference on Verified Software: Theories, Tools, and Experiments (VSTTE 2017)},
-note = {To appear },
-keywords = {},
-pubstate = {published},
-tppubtype = {inproceedings}
+
+@InProceedings{BeckertEtAl2017a,
+  author    = {Bernhard Beckert and Jonas Schiffl and Peter H. Schmitt and Mattias Ulbrich},
+  booktitle = {9th Working Conference on Verified Software: Theories, Tools, and Experiments (VSTTE 2017)},
+  title     = {Proving JDK's Dual Pivot Quicksort Correct},
+  year      = {2017},
+  note      = {To appear},
+  date      = {2017-07-22},
+  pubstate  = {published},
+  tppubtype = {inproceedings},
+  url       = {https://formal.iti.kit.edu/biblio/?lang=en\&key=BeckertEtAl2017a},
 }
 @article{deGouw2017,
 title = {Verifying OpenJDK's Sort Method for Generic Collections},
@@ -561,21 +594,6 @@ address = {New York, NY, USA},
 keywords = {Invariant generation, secure information flow, Test Case Generation},
 pubstate = {published},
 tppubtype = {inproceedings}
-}
-@article{MostowskiU16,
-title = {Dynamic Dispatch for Method Contracts Through Abstract Predicates},
-author = {Wojciech Mostowski and Mattias Ulbrich},
-url = {http://dx.doi.org/10.1007/978-3-319-46969-0_7},
-doi = {10.1007/978-3-319-46969-0_7},
-year  = {2016},
-date = {2016-01-01},
-journal = {Trans. Modularity and Composition},
-volume = {1},
-pages = {238--267},
-crossref = {DBLP:journals/taosd/2016-1},
-keywords = {Verification},
-pubstate = {published},
-tppubtype = {article}
 }
 @inproceedings{HentschelHB16iFM,
 title = {Can Formal Methods Improve the Efficiency of Code Reviews?},
@@ -807,20 +825,6 @@ keywords = {Design by Contract, family-based verification, feature-based specifi
 pubstate = {published},
 tppubtype = {inproceedings}
 }
-@inproceedings{nfm2014JKelloy,
-title = {JKelloy: A Proof Assistant for Relational Specifications of Java Programs},
-author = {Aboubakr Achraf El Ghazi and Mattias Ulbrich and Christoph Gladisch and Shmuel Tyszberowicz and Mana Taghdiri},
-url = {http://dx.doi.org/10.1007/978-3-319-06200-6_13},
-doi = {10.1007/978-3-319-06200-6_13},
-year  = {2014},
-date = {2014-01-01},
-booktitle = {NASA Formal Methods - 6th International Symposium, NFM 2014, Houston, TX, USA, April 29 - May 1, 2014. Proceedings},
-pages = {173--187},
-crossref = {DBLP:conf/nfm/2014},
-keywords = {Verification},
-pubstate = {published},
-tppubtype = {inproceedings}
-}
 @techreport{Bruns14,
 title = {Formal Verification of an Electronic Voting System},
 author = {Daniel Bruns},
@@ -872,3 +876,948 @@ tppubtype = {techreport}
   biburl    = {https://dblp.org/rec/conf/nfm/2014.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
+
+
+@InProceedings{MLH07,
+  author =       {Oleg M\"{u}rk and Daniel Larsson and Reiner H\"{a}hnle},
+  title =        {{KeY-C}: A Tool for Verification of {C} Programs},
+  booktitle =    {Proc. 21st Conference on Automated
+                  Deduction (CADE), Bremen, Germany},
+  year =         {2007},
+  editor =       {Frank Pfenning},
+  series =       {LNCS},
+  volume = {4603},
+  pages = {385--390},
+  publisher =    {Springer-Verlag}
+}
+
+@InProceedings{GedellLoop06,
+  author =      {Tobias Gedell, Reiner H{\"a}hnle},
+  title =       {Automating Verification of Loops by Parallelization},
+  booktitle =    {Proceedings, 13th International Conference on Logic for Programming, Artificial Intelligence and Reasoning},
+  year =         2006,
+  series =       lnai,
+  publisher =    spv,
+  note = {To appear}
+}
+
+@inproceedings{engelHaehnle07,
+    author = {Christian Engel and Reiner H{\"a}hnle},
+    title = {Generating Unit Tests from Formal Proofs},
+    booktitle = {Proceedings, 1st International Conference on Tests And Proofs (TAP), Zurich, Switzerland},
+    editor = {Yuri Gurevich and Bertrand Meyer},
+    year =         {2007},
+    series =       {LNCS},
+    volume = {4454},
+    publisher =    {Springer}
+}
+@PhDThesis{	  Grahl15,
+  author	= {Daniel Grahl},
+  title		= {Deductive Verification of Concurrent Programs and its
+		  Application to Secure Information Flow for {Java}},
+  school	= {Karlsruhe Institute of Technology},
+  year		= 2015,
+  month		= {29~}  # oct,
+  url		= {http://digbib.ubka.uni-karlsruhe.de/volltexte/1000050695},
+  urn		= {urn:nbn:de:swb:90-506951},
+  doi		= {10.5445/IR/1000050695},
+  abstract	= {The goal of this thesis is to develop a rigorous analysis
+		  technique for proving functional and relational correctness
+		  of shared-memory multi-threaded object-oriented software
+		  systems---such as programs written in the Java
+		  language---based on formal program semantics and deductive
+		  verification. This work contains the first approach towards
+		  a semantically precise information flow anlaysis for
+		  concurrent programs.}
+}
+
+@InProceedings{	  BrunsDoGreinerEtAl15,
+  author	= {Daniel Bruns and Huy Quoc Do and Simon Greiner and Mihai
+		  Herda and Martin Mohr and Enrico Scapin and Tomasz
+		  Truderung and Bernhard Beckert and Ralf K{\"u}sters and
+		  Heiko Mantel and Richard Gay},
+  title		= {Poster: {Security} in E-Voting},
+  booktitle	= {36th IEEE Symposium on Security and Privacy, Poster
+		  Session},
+  editor	= {Sophie Engle},
+  year		= 2015,
+  month		= may # {~18}
+}
+
+@TechReport{Bruns15,
+  author      = {Bruns, Daniel},
+  institution = {Department of Informatics, Karlsruhe Institute of Technology},
+  title       = {Deductive Verification of Concurrent Programs},
+  year        = {2015},
+  number      = {2015-3},
+  abstract    = {Verification of concurrent programs still poses one of the
+		  major challenges in computer science. Several techniques to
+		  tackle this problem have been proposed. However, they often
+		  do not scale. We present an adaptation of the rely\slash
+		  guarantee methodology in dynamic logic. Rely\slash
+		  guarantee uses functional specification to symbolically
+		  describe the behavior of concurrently running threads:
+		  while each thread \emph{guarantees} adherence to a
+		  specified property at any point in time, all other threads
+		  can \emph{rely} on this property being established. This
+		  allows to regard threads largely in isolation---only
+		  w.r.t.\ an environment constrained by these specifications.
+		  While rely\slash guarantee based approaches often suffer
+		  from a considerable specification overhead, we complement
+		  functional thread specifications with frame conditions.
+		  
+		  We will explain our approach using a simple, but concurrent
+		  programing language. Besides the usual constructs for
+		  sequential programs, it caters for dynamic thread creation.
+		  We define semantics of concurrent programs w.r.t.\ an
+		  underspecified deterministic scheduling function.
+		  
+		  To formally reason about programs of this language, we
+		  introduce a novel multi-modal logic, \emph{Concurrent
+		  Dynamic Trace Logic} (CDTL). It combines the strengthes of
+		  dynamic logic with those of linear temporal logic and
+		  allows to express temporal properties about symbolic
+		  program traces. We first develop a sound and complete
+		  sequent calculus for the logic subset that uses the
+		  sequential part of the language, based on symbolic
+		  execution. In a second step, we extend this to a calculus
+		  for the complete logic by adding symbolic execution rules
+		  for concurrent interleavings and dynamic thread creation
+		  based on the rely\slash guarantee methodology. Again, this
+		  calculus is proven sound and complete.},
+  issn        = {2190-4782},
+  license     = {http://creativecommons.org/licenses/by-nc-nd/3.0/},
+  series      = {Karlsruhe Reports in Informatics},
+  url         = {http://digbib.ubka.uni-karlsruhe.de/volltexte/1000045641},
+  urn         = {urn:nbn:de:swb:90-456415},
+}
+
+@InProceedings{	  Bruns15a,
+  author	= {Daniel Bruns},
+  title		= {A Theorem Proving Approach to Secure Information Flow in
+		  Concurrent Programs (extended abstract)},
+  booktitle	= {Workshop on Foundations of Computer Security (FCS~2015)},
+  editor	= {Deepak Garg and Boris K{\"o}pf},
+  language	= {english},
+  year		= 2015,
+  month		= jul,
+  url		= {http://software.imdea.org/~bkoepf/FCS15/paper3.pdf}
+}
+
+@PhDThesis{	  Scheben14,
+  author	= {Christoph Scheben},
+  title		= {Program-level Specification and Deductive Verification of
+		  Security Properties},
+  year		= 2014,
+  school	= {Karlsruhe Institute of Technology},
+  url		= {http://digbib.ubka.uni-karlsruhe.de/volltexte/1000046878}
+}
+
+@mastersthesis{Nikolov14,
+  author        = {Pavel Nikolov}, 
+  title		= {Combining theorem proving and type systems for precise
+and efficient information flow verification},
+  type		= {Studienarbeit},
+  school	= {Karlsruhe Institute of Technology}, 
+  year		= 2014
+}
+@MastersThesis{	  Wagner13,
+  author	= {Andreas Wagner},
+  title		= {Trace Based Reasoning with {KeY} and {JML}},
+  year		= 2013,
+  school	= {Karlsruhe Institute of Technology},
+  type		= {Studienarbeit},
+  url		= {http://www.key-project.org/DeduSec/2013_Wagner_TraceSpecification.pdf}
+		  
+}
+@MastersThesis{	  Ruch13,
+  author	= {Fabian Ruch},
+  title		= {Efficient Logic-Based Information Flow Analysis Of
+		  Object-Oriented Programs},
+  year		= 2013,
+  type		= {Bachelor thesis},
+  school	= {Karlsruhe Institute of Technology},
+  url		= {http://digbib.ubka.uni-karlsruhe.de/volltexte/1000036850},
+  urn		= {urn:nbn:de:swb:90-368506}
+}
+
+
+@MastersThesis{	  Wallisch14,
+  author	= {Kai Wallisch},
+  title		= {Maps in {Java} Dynamic Logic},
+  type		= {Studienarbeit},
+  year		= 2014,
+  school	= {Karlsruhe Institute of Technology}
+}
+
+@InProceedings{BeckertBrunsKlebanovEtAl14,
+  author    = {Bernhard Beckert and Daniel Bruns and Vladimir Klebanov and Christoph Scheben and Peter H. Schmitt and Mattias Ulbrich},
+  booktitle = {Logic-Based Program Synthesis and Transformation, LOPSTR 2013},
+  title     = {Information Flow in Object-Oriented Software},
+  year      = {2014},
+  editor    = {Gopal Gupta and Ricardo Pe{\~n}a},
+  number    = {8901},
+  pages     = {19--37},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  abstract  = {This paper contributes to the investigation of
+		  object-sensitive information-flow properties for sequential
+		  Java, i.e., properties that take into account information
+		  leakage through objects, as opposed to primitive values. We
+		  present two improvements to a popular object-sensitive
+		  non-interference property. Both reduce the burden on
+		  analysis and monitoring tools. The second contribution is a
+		  formalization of this property in a program logic -- JavaDL
+		  in our case -- which allows using an existing tool without
+		  requiring program modification. The third contribution is a
+		  novel fine-grained specification methodology. In our
+		  approach, arbitrary JavaDL terms (read side-effect-free
+		  Java expressions) may be assigned a security level -- in
+		  contrast to security labels being attached to fields and
+		  variables only.},
+  doi       = {10.1007/978-3-319-14125-1_2},
+  isbn      = {978-3-319-14125-1},
+}
+
+@InProceedings{	  AhrendtBeckertBrunsEtAl14,
+  author	= {Ahrendt, Wolfgang and Beckert, Bernhard and Bruns, Daniel
+		  and Bubel, Richard and Gladisch, Christoph and Grebing,
+		  Sarah and H{\"a}hnle, Reiner and Hentschel, Martin and
+		  Herda, Mihai and Klebanov, Vladimir and Mostowski, Wojciech
+		  and Scheben, Christoph and Schmitt, Peter H. and Ulbrich,
+		  Mattias},
+  title		= {The {KeY} Platform for Verification and Analysis of
+		  {Java} Programs},
+  year		= 2014,
+  booktitle	= {Verified Software: Theories, Tools, and Experiments (VSTTE
+		  2014)},
+  language	= {english},
+  editor	= {Giannakopoulou, Dimitra and Kroening, Daniel},
+  pages		= {1--17},
+  publisher	= {Springer-Verlag},
+  number	= 8471,
+  series	= {Lecture Notes in Computer Science},
+  isbn		= {978-3-642-54107-0},
+  doi		= {10.1007/978-3-319-12154-3_4},
+  url		= {http://link.springer.com/chapter/10.1007/978-3-319-12154-3_4}
+		  ,
+  abstract	= {The \KeY\ system offers a platform of software analysis
+		  tools for sequential Java. Foremost, this includes full
+		  functional verification against contracts written in the
+		  Java Modeling Language. But the approach is general enough
+		  to provide a basis for other methods and purposes: (i)
+		  complementary validation techniques to formal verification
+		  such as testing and debugging, (ii) methods that reduce the
+		  complexity of verification such as modularization and
+		  abstract interpretation, (iii) analyses of non-functional
+		  properties such as information flow security, and (iv)
+		  sound program transformation and code generation. We show
+		  that deductive technology that has been developed for full
+		  functional verification can be used as a basis and
+		  framework for other purposes than pure functional
+		  verification. We use the current release of the \KeY\
+		  system as an example to explain and prove this claim.}
+}
+
+
+@TechReport{	  Bruns14b,
+  author	= {Daniel Bruns},
+  title		= {Towards Specification and Verification of Information Flow
+		  in Concurrent {Java-}like Programs},
+  year		= 2014,
+  institution	= {Department of Informatics, Karlsruhe Institute of
+		  Technology},
+  number	= {2014-5},
+  series	= {Karlsruhe Reports in Informatics},
+  url		= {http://digbib.ubka.uni-karlsruhe.de/volltexte/1000039446},
+  urn		= {urn:nbn:de:swb:90-394465},
+  license	= {http://creativecommons.org/licenses/by-nc-nd/3.0/}
+}
+
+@TechReport{BeckertBrunsKlebanovEtAl13,
+  author      = {Bernhard Beckert and Daniel Bruns and Vladimir Klebanov and Christoph Scheben and Peter H. Schmitt and Mattias Ulbrich},
+  institution = {Department of Informatics, Karlsruhe Institute of Technology},
+  title       = {Information Flow in Object-Oriented Software -- Extended Version --},
+  year        = {2013},
+  number      = {2013-14},
+  issn        = {2190-4782},
+  license     = {http://creativecommons.org/licenses/by-nc-nd/3.0/},
+  series      = {Karlsruhe Reports in Informatics},
+  url         = {http://digbib.ubka.uni-karlsruhe.de/volltexte/1000037606},
+  urn         = {urn:nbn:de:swb:90-376067},
+}
+
+
+@InProceedings{	  beckert.bruns.ea12,
+  author	= {Bernhard Beckert and Daniel Bruns and Sarah Grebing},
+  title		= {Mind the Gap: Formal Verification and the {Common}
+		  {Criteria}},
+  year		= 2012,
+  booktitle	= {6th~International Verification Workshop, VERIFY-2010},
+  address	= {Edinburgh, United Kingdom},
+  editor	= {Markus Aderhold and Serge Autexier and Heiko Mantel},
+  abstract	= {It is a common belief that the rise of standardized
+		  software certification schemes like the Common Criteria
+		  (CC) would give a boost to formal verification, and that
+		  software certification may be a killer application for
+		  program verification. However, while formal models are
+		  indeed used throughout high-assurance certification,
+		  verification of the actual implementation is not required
+		  by the CC and largely neglected in certification practice
+		  -- despite the great advances in program verification over
+		  the last decade. In this paper we discuss the gap between
+		  program verification and CC software certification, and we
+		  point out possible uses of code-level program verification
+		  in the CC certification process.},
+  series	= {EPiC Series},
+  volume	= {3},
+  pages		= {4-12},
+  publisher	= {EasyChair},
+  issn		= {2040-557X},
+  note		= {Discussion paper},
+  url		= {http://easychair.org/publications/?page=1489979161}
+}
+
+@TechReport{beckert.bruns12b,
+  author      = {Bernhard Beckert and Daniel Bruns},
+  institution = {Department of Informatics, Karlsruhe Institute of Technology},
+  title       = {Dynamic Trace Logic: Definition and Proofs},
+  year        = {2012},
+  number      = {2012-10},
+  abstract    = {Dynamic logic is an established instrument for program
+		  verification and for reasoning about the semantics of
+		  programs and programming languages. In this paper, we
+		  define an extension of dynamic logic, called Dynamic Trace
+		  Logic~(DTL), which combines the expressiveness of program
+		  logics such as dynamic logic with that of temporal logic.
+		  And we present a sound and relatively complete sequent
+		  calculus for proving validity of DTL formulae. Due to its
+		  expressiveness, DTL can serve as a basis for functional
+		  verification of concurrent programs and for proving
+		  information-flow properties among other applications.},
+  license     = {http://creativecommons.org/licenses/by-nc-nd/3.0/de},
+  series      = {Karlsruhe Reports in Informatics},
+  url         = {http://digbib.ubka.uni-karlsruhe.de/volltexte/1000028184},
+  urn         = {urn:nbn:de:swb:90-281845},
+}
+
+@TechReport{beckert.bruns.ea12b,
+  author      = {Bernhard Beckert and Daniel Bruns and Ralf K\"{u}sters and Christoph Scheben and Schmitt, Peter H. and Tomasz Truderung},
+  institution = {Department of Informatics, Karlsruhe Institute of Technology},
+  title       = {The {KeY} Approach for the Cryptographic Verification of {J}ava Programs: {A} Case Study},
+  year        = {2012},
+  number      = {2012-8},
+  abstract    = {In this paper, we report on an ongoing case study in
+		  which we use the KeY tool, a theorem prover for checking
+		  functional correctness and noninterference properties of
+		  Java programs, to establish computational
+		  indistinguishability for a simple Java program that
+		  involves clients sending encrypted messages over an
+		  untrusted network to a server. The analysis uses a general
+		  framework, recently proposed by K{\"u}sters et al., which
+		  enables program analysis tools, such as KeY, that can
+		  check (standard) noninterference properties for Java
+		  programs to establish computational indistinguishability
+		  properties.},
+  license     = {http://creativecommons.org/licenses/by-nc-nd/3.0/de},
+  series      = {Karlsruhe Reports in Informatics},
+  url         = {http://digbib.ubka.uni-karlsruhe.de/volltexte/1000027497},
+  urn         = {urn:nbn:de:swb:90-274973},
+}
+
+@InCollection{	  scheben.schmitt12,
+  author	= {Scheben, Christoph and Schmitt, Peter H.},
+  title		= {Verification of Information Flow Properties of {J}ava
+		  Programs without Approximations},
+  booktitle	= {Formal Verification of Object-Oriented Software},
+  series	= {LNCS},
+  volume	= {7421},
+  publisher	= {Springer},
+  pages		= {232--249},
+  year		= {2012},
+}
+
+
+@inproceedings{Klebanov12a,
+  author    = {Vladimir Klebanov},
+  title     = {Precise Quantitative Information Flow Analysis Using Symbolic Model Counting},
+  editor    = {Fabio Martinelli and Flemming Nielson},
+  booktitle = {Proceedings, International Workshop on Quantitative Aspects in Security Assurance (QASA)},
+  year      = {2012},
+  url       = {http://formal.iti.kit.edu/~klebanov/pubs/qasa2012.pdf}
+}
+
+@InProceedings{	  beckert.bruns13,
+  author	= {Bernhard Beckert and Daniel Bruns},
+  title		= {Dynamic Logic with Trace Semantics},
+  booktitle	= {24th International Conference on Automated Deduction
+		  (CADE-24)},
+  editor	= {Maria Paola Bonacina},
+  year		= 2013,
+  publisher	= {Springer-Verlag},
+  series	= {Lecture Notes in Computer Science},
+  volume	= 7898,
+  pages		= {315--329},
+  isbn		= {978-3-642-38573-5},
+  doi		= {10.1007/978-3-642-38574-2_22},
+  url		= {http://link.springer.com/chapter/10.1007/978-3-642-38574-2_22},
+  abstract	= {Dynamic logic is an established instrument for program
+		  verification and for reasoning about the semantics of
+		  programs and programming languages. In this paper, we
+		  define an extension of dynamic logic, called Dynamic Trace
+		  Logic~(DTL), which combines the expressiveness of program
+		  logics such as dynamic logic with that of temporal logic.
+		  And we present a sound and relatively complete sequent
+		  calculus for proving validity of DTL formulae. Due to its
+		  expressiveness, DTL can serve as a basis for proving
+		  functional and information-flow properties in concurrent
+		  programs, among other applications.}
+}
+
+@InProceedings{	  kusters.truderung.ea13,
+  author	= {Ralf K{\"u}sters and Tomasz Truderung and Bernhard Beckert
+		  and Daniel Bruns and J{\"u}rgen Graf and Christoph Scheben},
+  title		= {A Hybrid Approach for Proving Noninterference and
+		  Applications to the Cryptographic Verification of {Java}
+		  Programs},
+  booktitle	= {Grande Region Security and Reliability Day 2013},
+  url		= {http://grsrd.uni.lu/papers/grsrd2013_submission_2.pdf},
+  year		= 2013,
+  editor	= {Christian Hammer and Sjouke Mauw},
+  address	= {Luxembourg},
+  note		= {Extended Abstract}
+}
+
+@inproceedings{KlebanovMM13,
+ author = {Vladimir Klebanov and Norbert Manthey and Christian Muise},
+ title = {{SAT}-based Analysis and Quantification of Information Flow in Programs},
+ booktitle = {Proceedings, International Conference on Quantitative
+ Evaluation of Systems (QEST)},
+ year = {2013},
+ publisher = {Springer},
+ series = {LNCS},
+ volume	= {8054},
+ pages	= {156-171},
+ doi	= {10.1007/978-3-642-40196-1_16},
+ url	= {http://formal.iti.kit.edu/~klebanov/pubs/qest2013.pdf},
+}
+
+
+@inproceedings{SchebenSchmitt14,
+  author = {Christoph Scheben and Schmitt, Peter H.},
+  title = {Efficient Self-Composition for Weakest Precondition Calculi},
+  booktitle = {Proceedings, 19th International Symposium on Formal Methods (FM)},
+  year={2014},
+  volume={8442},
+  series={LNCS},
+  editor={Jones, Cliff and Pihlajasaari, Pekka and Sun, Jun},
+  doi={10.1007/978-3-319-06410-9_39},
+  publisher={Springer International Publishing},
+  pages={579-594}
+}
+
+@article{Klebanov14,
+  author = {Vladimir Klebanov},
+  title = {Precise Quantitative Information Flow Analysis -- A Symbolic Approach},
+  year = {2014},
+  journal = {Theoretical Computer Science},
+  volume = {538},
+  number = {0},
+  pages = {124-139},
+  doi	= {10.1016/j.tcs.2014.04.022},
+}
+
+
+
+@InProceedings{DoerreKlebanov16a,
+  author	= {Felix D{\"o}rre and Vladimir Klebanov},
+  title		= {Practical Detection of Entropy Loss in Pseudo-Random Number Generators},
+  booktitle	= {Proceedings, ACM Conference on Computer and Communications Security (CCS)},
+  year		= 2016
+}
+
+
+@misc{DoerreKlebanov16b,
+  author	= {Felix D{\"o}rre and Vladimir Klebanov},
+  title		= {Entropy Loss and Output Predictability in the Libgcrypt PRNG (CVE-2016-6313)},
+  year		= 2016,
+  url		= {http://formal.iti.kit.edu/~klebanov/libgcrypt-cve-2016-6313.pdf},
+}
+
+
+@InProceedings{KlebanovWW16,
+  author	= {Vladimir Klebanov and Alexander Weigl and J{\"o}rg Weisbarth},
+  title		= {Sound Probabilistic #SAT with Projection},
+  booktitle	= {Proceedings, Workshop on Quantitative Aspects of Programming Languages and Systems (QAPL)},
+  year		= 2016
+}
+
+
+@inproceedings{QASA2016, 
+  author={Alexander Weigl},
+  title={Efficient {SAT}-based Pre-image Enumeration for Quantitative Information Flow in Programs},
+  booktitle={5th International Workshop on Quantitative Aspects of Security Assurance (QASA 2016)},
+  year=2016
+}
+
+@InProceedings{BeckertBischofEA2017,
+  author                = {Bernhard Beckert and Simon Bischof
+                           and Mihai Herda and Michael Kirsten
+                           and Marko {Kleine B\"{u}ning}},
+  title                 = {Combining Graph-Based and Deduction-Based Information-Flow Analysis},
+  booktitle             = {5th Workshop on Hot Issues in Security Principles and Trust (HotSpot 2017)
+                           affiliated with ETAPS 2017: European Joint Conferences on Theory and
+                           Practice of Software},
+  url                   = {https://sec.informatik.uni-stuttgart.de/_media/events/hotspot2017/proceedings.pdf},
+  month                 = apr,
+  year                  = {2017},
+  abstract              = {Information flow control (IFC) is a category of techniques for ensuring system
+                           security by enforcing information flow properties such as non-interference.
+                           Established IFC techniques range from fully automatic approaches with much
+                           over-approximation to approaches with high precision but potentially laborious
+                           user interaction. A noteworthy approach mitigating the weaknesses of both
+                           automatic and interactive IFC techniques is the hybrid approach, developed by
+                           K\"{u}sters et al., which -- however -- is based on program modifications and
+                           still requires a significant amount of user interaction.
+                           \newline
+
+                           In this paper, we present a combined approach that works without any program
+                           modifications. It minimizes potential user interactions by applying a
+                           dependency-graph-based information-flow analysis first. Based on
+                           over-approximations, this step potentially generates false positives. Precise
+                           non-interference proofs are achieved by applying a deductive theorem prover with
+                           a specialized information-flow calculus for checking that no path from a secret
+                           input to a public output exists. Both tools are fully integrated into a combined
+                           approach, which is evaluated on a case study, demonstrating the feasibility of
+                           automatic and precise non-interference proofs for complex programs.},
+  place                 = {Uppsala, Sweden},
+  date                  = {April 23}
+}
+@TechReport{AhrendtBaarEA00,
+  author = 	 {Wolfgang Ahrendt and Thomas Baar and Bernhard Beckert
+		  and Martin Giese and Elmar Habermalz and Reiner
+		  H\"ahnle and Wolfram Menzel and Peter H. Schmitt},
+  title = 	 {The {KeY} Approach: {I}ntegrating Object Oriented
+		  Design and Formal Verification},
+  institution =  {University of Karlsruhe, Department of Computer Science},
+  type = 	 {Technical Report},
+  number = 	 {2000/4},
+  month = 	 jan,
+  year = 	 {2000}
+}
+
+
+
+@Article{Baar03,
+  author = 	 {Thomas Baar},
+  title = 	 {Metamodels without Metacircularities},
+  journal = 	 {L'Objet},
+  year = 	 {2003},
+  OPTkey = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTpages = 	 {},
+  OPTmonth = 	 {},
+  note = 	 {Selected for publication},
+  OPTannote = 	 {}
+}
+
+@InProceedings{DHS03,
+  author = 	 {\'{A}d\'{a}m Darvas and Reiner H\"{a}hnle and Dave
+Sands},
+  title = 	 {A Theorem Proving Approach to Analysis of Secure
+Information
+  Flow},
+  booktitle =	 {Workshop on Issues in the Theory of Security, WITS},
+  OPTpages = 	 {},
+  year =	 {2003},
+  editor =	 {Roberto Gorrieri},
+  organization = {IFIP WG 1.7, ACM SIGPLAN and GI FoMSESS}
+}
+@TECHREPORT{KeYTecRep03,
+  author = {Wolfgang Ahrendt and Thomas Baar and Bernhard Beckert and
+            Richard Bubel and Martin Giese and Reiner H\"{a}hnle and
+            Wolfram Menzel and Wojciech Mostowski and Andreas Roth and
+            Steffen Schlager and Peter H. Schmitt},
+  title = {The {KeY} Tool},
+  institution = {Department of Computing Science, Chalmers University of Technology
+                 and G\"{o}teborg University},
+  number = {2003-05},
+  isbn_issn = {1650-3023},
+  month = mar,
+  year = {2003}  
+}
+
+
+@INPROCEEDINGS{HaehnleWallenburg03,
+        AUTHOR             = {Reiner H\"{a}hnle and Angela Wallenburg},
+        TITLE              = {Using a Software Testing Technique to Improve Theorem Proving},
+        BOOKTITLE          = {Post Conference Proceedings,  
+                              3rd International Workshop on Formal Approaches 
+                              to Testing of Software (FATES 2003), Montr\'{e}al, 
+                              Canada},
+        EDITOR             = {Alexandre Petrenko and Andreas Ulrich},
+        PUBLISHER          = {Springer-Verlag},
+        SERIES             = {LNCS},
+        VOLUME             =  2931,
+        PAGES              = {30--41},
+        YEAR               = {2004}
+}
+@MastersThesis{Larsson2003,
+  author = 	 {Daniel Larsson},
+  title = 	 {{OCL} Specifications for the {\JavaCard{}} {API}},
+  school = 	 {Chalmers University of Technology, Department of Computing Science, G\"{o}teborg, Sweden},
+  year = 	 2003
+}
+@Article{        HaehnleMenzelEA98,
+  author = 	 {Reiner H\"ahnle and Wolfram Menzel and Peter H. Schmitt},
+  title = 	 {Integrierter deduktiver {S}oftware-{E}ntwurf},
+  journal = 	 {KI},
+  number =       {4},
+  volume =       {98},
+  pages =        {40--41},		   
+  year = 	 {1998},
+  note = 	 {In German}
+}
+
+@InProceedings{BHSS00,
+  author        = {Thomas Baar and Reiner H\"ahnle and Theo Sattler and
+                  Peter H. Schmitt},
+  title         = {{E}ntwurfsmustergesteuerte {E}rzeugung von
+                   {OCL}-{C}on\-straints},
+  booktitle     = {Informatik 2000, 30.\ Jahrestagung der Gesellschaft f\"ur Infomatik},
+  editor        = {K. Mehlhorn and G. Snelting},
+  month         = sep,
+  pages         = {389--404},
+  publisher = {Springer},
+  isbn_issn          = "3-540-67880-8",
+  year          = {2000},                 
+}
+        
+@inproceedings{     Giese00,
+   author = {Martin Giese},
+   title  = {Proof Search without Backtracking using Instance Streams, Position Paper},
+   booktitle = {Proc.\ Int.\ Workshop on First-Order Theorem Proving, St.\ Andrews, Scotland},
+   year = {2000},
+   note = {Available online at
+  \href{http://i12www.ira.uka.de/~key/doc/2000/giese00.ps.gz}{\texttt{http://i12www.ira.uka.de/\~{}key/doc/2000/giese00.ps.gz}}}
+}
+@mastersthesis{Sattler00,
+        AUTHOR             = {Theo Sattler},
+        school       = {{F}akult\"{a}t f\"{u}r Informatik, {U}niversit\"{a}t {K}arlsruhe},
+        MONTH              = jan,
+        TITLE              = {Einbindung formaler {C}onstraints 
+                              in {UML} {S}pezifikationen},
+        YEAR               = {2000}
+}
+@InProceedings{Beckert00,
+  author        = {Bernhard Beckert},
+  title         = {A Dynamic Logic for Java Card},
+  booktitle     = {Proceedings, 2nd ECOOP Workshop on Formal Techniques for
+                   Java Programs, Cannes, France},
+  pages         = {111--119},
+  year          = {2000},                            
+}
+
+@InProceedings{BaarHaehnle00,
+  author        = {Thomas Baar and Reiner H\"{a}hnle},
+  title         = {An Integrated Metamodel for {OCL} Types},
+  editor        = {R. France},
+  year          = {2000},                 
+  booktitle =    "OOPSLA 2000 Workshop Refactoring the UML:  In Search of the Core, Minneapolis, Minnesota, USA",
+  month         = oct       
+}
+@InProceedings{Baar00,
+  author        = {Thomas Baar},
+  title         = {Experiences with the {UML}/{OCL}-Approach in Practice and Strategies of Overcome Deficiencies},
+  editor        = {Net.ObjectDays-Forum},
+  pages =        "192--201",
+  year          = {2000},                 
+  booktitle =   "Tagungsband Net.ObjectDays2000, Erfurt, Germany", 
+  isbn_issn          = "3-89683-932-2",
+  month         = oct           
+}
+@Unpublished{Beckert00a,
+  author        = {Bernhard Beckert},
+  title         = {Depth-first Proof Search without Backtracking for
+		   Free Variable Clausal Tableaux},
+  booktitle     = {Third International Workshop on First-Order Theorem
+                   Proving (FTP), St.~Andrews, Scotland},
+  editor        = {P. Baumgartner and H. Zhang},
+  pages         = {44--55},
+  year          = {2000},                            
+}
+@InProceedings{Haehnle00a,
+  author =       {Wolfgang Ahrendt and Thomas Baar and Bernhard Beckert
+                  and Martin Giese and Elmar Habermalz and Reiner
+                  H\"ahnle and Wolfram Menzel and Peter H. Schmitt},
+  title =        "The {KeY} Approach: {I}ntegrating Object Oriented
+                  Design and Formal Verification",
+  editor =       "Manuel Ojeda-Aciego and Inma P. de Guzm\'{a}n and
+                  Gerhard Brewka and Lu\'{\i{}}s Moniz Pereira",
+  series =       lnai,
+  pages =        "21--36",
+  volume =       1919,
+  month =        oct,
+  year =         "2000",
+  booktitle =    "Proc.\ 8th European Workshop on Logics in AI (JELIA), Malaga, Spain",
+  publisher =    spv,
+  note =         "{URL:} 
+  \texttt{ftp://ftp.cs.chalmers.se/pub/users/reiner/jelia.ps.gz}" 
+}
+
+
+@inproceedings{     Giese00a,
+   author = {Martin Giese},
+   title  = {A First-Order Simplification Rule with Constraints},
+   booktitle = {Proc.\ Int.\ Workshop on First-Order Theorem Proving, St.\ Andrews, Scotland},
+   year = {2000},
+   note = {Available online at
+  \href{http://i12www.ira.uka.de/~key/doc/2000/giese00a.ps.gz}{http://i12www.ira.uka.de/\~{}key/doc/2000/giese00a.ps.gz}}
+}
+@TechReport{SattlerAhrendt00,
+  author =        {Theo Sattler and Wolfgang Ahrendt},
+  title =         {Embedding ASMs into State Transition Diagrams},
+  institution =   {University of Karlsruhe, Department of Computer Science},
+  type =          {Technical Report},
+  number =        {2000/20},
+  month =         jan,
+  year =          {2000}
+}@InProceedings{Ahrendt00,
+  author        = {Wolfgang Ahrendt},
+  title         = {A Basis for Model Computation in Free Data Types},
+  booktitle     = {Proceedings, CADE-17 Workshop on
+                   Model Computation - Principles, Algorithms, Applications,
+                   Pittsburgh, Pennsylvania, USA},
+  year          = {2000}
+}@Unpublished{     Habermalz00,
+  author        = {Elmar Habermalz},
+  title         = {Interactive Theorem Proving with Schematic
+		   Theory Specific Rules},
+  year          = {2000},		  
+  note          = {Submitted}             
+}
+@InProceedings{GieseHeldal04,
+  author = {Martin Giese and Rogardt Heldal},
+  title = {From Informal to Formal Specifications in {UML}},
+  pages = {197--211},
+  booktitle  = {Proc. of UML2004, Lisbon},
+  editor = {Thomas Baar and Alfred Strohmeier and
+            Ana Moreira and Stephen J. Mellor},
+  year = {2004},
+  series = {LNCS},
+  volume = {3273},
+  publisher = {Springer}
+}
+
+@TechReport{ASMKEY04,
+  author      = {Stanislas Nanchen and Hubert Schmid and Peter H. Schmitt and Robert St\"{a}rk},
+  institution = {ETH Z\"{u}rich,},
+  title       = {The ASMKeY Theorem Prover},
+  year        = {2004},
+  number      = {436},
+  type        = {Technical Report},
+}
+
+@InProceedings{	  Giese04a,
+  author	= {Martin Giese},
+  title		= {Taclets and the {KeY} Prover},
+  booktitle	= {Proc. User Interfaces for Theorem Provers Workshop, UITP 2003},
+  year		= {2004},
+  editor	= {David Aspinall and Christoph L{\"u}th},
+  series =       "Electronic Notes in Theoretical Computer Science",
+  publisher =    "Elsevier",
+  volume = 103,
+  number = {C},
+  pages = {67-79}
+}
+ @inproceedings{GieseHaehnleLarsson04,
+  author = {Martin Giese and Reiner H{\"a}hnle and Daniel Larsson},
+  title = {Rule-Based Simplification of {OCL} Constraints},
+  booktitle = {Workshop on OCL and
+               Model Driven Engineering at UML2004, Lisbon},
+  editor = {Octavian Patrascoiu et al.},
+  pages = {84--98},
+  year = 2004
+}  
+@article{KeY2005, 
+  author        = {Wolfgang Ahrendt and Thomas Baar and 
+                   Bernhard Beckert and Richard Bubel and 
+                   Martin Giese and Reiner H\"ahnle and 
+                   Wolfram Menzel and Wojciech Mostowski and 
+                   Andreas Roth and Steffen Schlager and 
+                   Peter H. Schmitt}, 
+  title         = {The {KeY} Tool}, 
+  journal       = {Software and System Modeling},   
+  volume        = {4},
+  pages         = {32-54},
+  year          = {2005}, 
+  doi           = {http://springerlink.metapress.com/openurl.asp?genre=article&id=doi:10.1007/s10270-004-0058-x},
+  publisher     = {Springer}
+}
+@InProceedings{Giese05b,
+  author = {M. Giese},
+  title = {A Calculus for Type Predicates and Type Coercion},
+  booktitle = {Automated Reasoning with Analytic Tableaux and Related Methods, Tableaux 2005},
+  pages = {123-137},
+  editor = {B. Beckert},
+  volume = {3702},
+  series = {LNAI},
+  publisher = {Springer},
+  year = {2005}
+}
+@InProceedings{HaehnleMostowski04,
+  author =	 {Reiner H\"{a}hnle and Wojciech Mostowski},
+  title =	 {Verification of Safety Properties in the Presence of Transactions},
+  booktitle =    {Post Conference Proceedings of {CASSIS}: Construction and 
+                  Analysis of Safe, Secure and Interoperable Smart devices, 
+                  Marseille},
+  publisher =    {Springer},
+  series =       {LNCS},
+  editor   =     {Gilles Barthe and Lilian Burdy and Marieke Huisman and
+                  Jean-Louis Lanet and Traian Muntean},
+  volume =       {3362},
+  pages =        {151--171},
+  year =	 {2005}
+}
+@InProceedings{ABBGHMMS02,
+  author = {Wolfgang Ahrendt and
+            Thomas Baar and
+            Bernhard Beckert and
+            Martin Giese and
+            Reiner H\"ahnle and
+            Wolfram Menzel and
+            Wojciech Mostowski and
+            Peter H. Schmitt},
+  title =  "The {KeY} System: {I}ntegrating Object-Oriented Design and
+            Formal Methods",
+  booktitle     = "Fundamental Approaches to Software Engineering. 5th
+                  International Conference, FASE 2002 Held as Part of the
+                  Joint European Conferences on Theory and Practice of
+                  Software, ETAPS 2002 Grenoble, France, April 2002,
+                  Proceedings",
+  editor        = "Ralf-Detlef Kutsche and Herbert Weber",
+  pages         = "327--330",
+  publisher = "Springer",
+  series =       "LNCS",
+  volume =       "2306",
+  year =         "2002",
+}
+@InProceedings{Baar02,
+  author =       {Thomas Baar},
+  title =        {How to Ground Meta-Circular {OCL} Descriptions -- a Set-Theoretic Approach --},
+  booktitle =    {Proceedings, Fourth Workshop on Rigorous Object-Oriented Methods, London},
+  year =         {2002},
+  editor =	 {T. Clark and A. Evans and K. Lano}
+}
+
+
+@InProceedings{wm02,
+  author = 	 {Wojciech Mostowski},
+  title = 	 {Rigorous development of {JavaCard} applications},
+  booktitle = 	 {Proc. Fourth Workshop on Rigorous Object-Oriented Methods, London},
+  year =	 2002,
+  editor =	 {T. Clarke and A. Evans and K. Lano}
+}
+
+@inproceedings{HJR01,
+  author = {Reiner H\"{a}hnle and Kristofer Johannisson and Aarne Ranta},
+  title =  "An Authoring Tool for Informal and 
+            Formal Requirements Specifications",
+  booktitle = {Fundamental Approaches to Software Engineering (FASE),
+               Part of Joint European Conferences on Theory and Practice
+               of Software, ETAPS, Grenoble},
+  publisher = spv,
+  series = lncs,
+  year = {2002},
+  pages = {233--248},
+  volume = 2306,
+  editor = {Ralf-Detlef Kutsche and Herbert Weber}
+}
+@InProceedings{Baar02a,
+  editor =       {Jean-Michel Bruel and Zohra Bellahs\`{e}ne},
+  author =       {Thomas Baar},
+  title =        {Executable and Symbolic Conformance Tests for Implementation Models},
+  booktitle =    {Proceedings, Advances in Object-Oriented Information Systems,OOIS 2002 Workshops,  Montpellier, France},
+  month =        sep,
+  pages =        {231--234},
+  publisher =    {Springer},
+  series =       {LNCS},
+  volume =       {2426},
+  year =         {2002}
+}
+
+
+
+@InProceedings{Giese02a,
+  author        = {Martin Giese},
+  title         = {A Model Generation Style Completeness Proof 
+	           for Constraint Tableaux with Superposition},
+  booktitle     = {Proc.\ Intl.\ Conf.\ on Automated Reasoning with 
+                   Analytic Tableaux and Related Methods, 
+                   Copenhagen, Denmark},
+  editor        = {Uwe Egly and Christian G. Ferm�ller},
+  pages         = {130--144},
+  year          = {2002},
+  series        = {LNCS},
+  volume        = {2381},
+  publisher     = {Springer-Verlag},
+}
+
+@unpublished{Keller01,
+  author = {Bernhard Beckert and Uwe Keller and Peter H. Schmitt},
+  title  = {Translating the Object Constraint Language
+            into First-order Predicate Logic},
+  note   = {Submitted to FASE 2002, available from
+  \texttt{http://i12www.ira.uka.de/\~{}projekt/publicat.htm}}
+}
+
+
+@InProceedings{Schmitt2001,
+  author        = {Peter H. Schmitt},
+  title         = {A Model Theoretic Semantics of {OCL}},
+  booktitle     = {Proceedings, IJCAR Workshop on Precise Modelling and
+                   Deduction for Object-oriented Software Development,
+                   Siena, Italy},
+  editor        = {B. Beckert and R. France and R. H\"ahnle and B. Jacobs},
+  publisher     = {Technical Report DII 07/01, Dipartimento di Ingegneria 
+                   dell'Informazione, Universit\`a degli Studi di Siena},
+  pages         = {43--57},
+  year          = {2001}
+}
+@InProceedings{Schmitt01b,
+  author        = {Peter H. Schmitt},
+  title         = {Iterate Logic},
+  booktitle     = {Proof Theory in Computer Science, Proceedings, 
+                   International Seminar, Dagstuhl Castle, 
+                   Germany, October 2001},
+  editor        = {Peter Schroeder-Heister and Robert St"{a}rk 
+                   and Reinhard Kahle},
+  pages         = {191--201},
+  publisher     = {Springer},
+  series        = {LNCS},
+  volume        = {2183},
+  year          = {2001}              
+}{Giese01a,
+  author        = {Martin Giese},
+  title         = {Incremental {C}losure of {F}ree {V}ariable {T}ableaux},
+  booktitle     = {Proc.\ Intl.\ Joint Conf.\ on Automated Reasoning,
+                  Siena, Italy},
+  editors       = {Rajeev Gor{\'e} and Alexander Leitsch and Tobias Nipkow},
+  pages         = {545-560}
+  year          = {2001},
+  series        = {LNCS},
+  number        = {2083},
+  publisher     = {Springer-Verlag},
+}
+@InProceedings{HaehnleRanta01a,
+  author =       {Reiner H\"{a}hnle and Aarne Ranta},
+  title =        {Connecting {OCL} with the Rest of the World},
+  booktitle =    {WTUML: Workshop on Transformations in UML at ETAPS, Genova, Italy},
+  year =         {2001},
+  month =        apr,
+  editor =       {Jon Whittle},
+  url =          {http://www.cs.chalmers.se/~reiner/papers/wtuml.ps.gz} 
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

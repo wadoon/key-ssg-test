@@ -144,8 +144,7 @@ def print_links(e, fields):
 
     print(f'<div class="links">{perm} {url} {doi} {long_version} {software}</div>')
 
-def print_place(fields):
-    type = fields['tppubtype']
+def print_place(type, fields):
     journal = fields.get('journal', "")
     booktitle = fields.get('booktitle', "")
     volume =  fields.get('volume', "")
@@ -202,7 +201,7 @@ def print_entry(e):
         print_persons(editors, 'editor')
     title = text(fields['title'])
     print(f'<span class="title">{title}</span>; ')
-    print_place(fields)
+    print_place(typ, fields)
     print_links(e, fields)
 
     if abstract:
@@ -233,7 +232,7 @@ if __name__ == '__main__':
     # result = engine.format_from_file("publications.bib", "plain", output_backend="md")
     # print(result)
 
-    entries = db.entries.values()
+    entries = [x for x in db.entries.values() if 'year' in x.fields]
     get_year = lambda e: -int(e.fields['year'])
     entries = sorted(entries, key = get_year)
 
