@@ -4,7 +4,7 @@ title: 'Proving Line Wrapping in KeY, Why3, Dafny and Frama-C'
 date: '2021-04-07T12:17:07+01:00'
 author: 'Mattias Ulbrich'
 permalink: /2021/04/07/proving-line-wrapping/
-categories:
+tags:
     - 'Case Study'
 ---
 
@@ -32,8 +32,9 @@ of the KeY solution to Dafny gives us a third comparison partner in
 Dafny. [Lionel](https://formal.iti.kit.edu/~blatter) provided
 a version in Frama-C.
 
-[![](/wp-content/uploads/2021/03/tooltip1-300x191.png)](/wp-content/uploads/2021/03/tooltip1.png)
-[![](/wp-content/uploads/2021/03/tooltip2-300x203.png)](/wp-content/uploads/2021/03/tooltip2.png)
+{{< fig src="tooltip1.png" caption="" width="50%" >}}
+
+{{< fig src="tooltip2.png" caption="" width="50%" >}}
 
 A simpler version of this example has been proposed as [the
 microchallenge in a recent KeY
@@ -65,6 +66,8 @@ already contain newline-characters when the method is called.
 | [Why3](http://why3.lri.fr)                   | WhyML       | [Link](https://gitlab.inria.fr/why3/why3/-/blob/master/examples/wrap_lines.mlw#L40)                  | [Link](https://gitlab.inria.fr/why3/why3/-/blob/master/examples/wrap_lines.mlw#L74)                  | OCaml           |
 | [Dafny](https://github.com/dafny-lang/dafny) | Dafny       |                                                                                                      | [Link](https://formal.iti.kit.edu/~ulbrich/pub/wrap.dfy)                                             | C#              |
 | [Frama-C](https://frama-c.com/)              | ACSL + C    | [Link](https://github.com/lyonel2017/VerifyThis-2017/blob/master/2021/microchallenge/WrapLine.c#L42) | [Link](https://github.com/lyonel2017/VerifyThis-2017/blob/master/2021/microchallenge/WrapLine.c#L88) | C               |
+{.table}
+
 
 *Simple Challenge* refers to the microchallenge in the tutorial.  
 *Code Language* refers to the language for the executable version of

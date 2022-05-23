@@ -1,0 +1,165 @@
+{{ define "main" }}
+<style>
+ .blog-post-title a { font-size: 80%;}
+</style>
+<main>
+    <h1>The KeY to Software Correctness</h1>
+    <h2>Decades of experience in proving program correctness for Java.</h2>
+    <div class="row">
+      <div class="fs-5 col-md-8">
+        <p>
+          The KeY Theroem Prover provides deductive formal verfification
+          for Java programs based on the Java Modeling Language. KeY was
+          successfully used to verify real-software, e.g., the JDK classes.
+        </p>
+        <p>
+          <a href="/downloads/" class="btn btn-primary btn-lg px-4">Download</a>
+          and
+          <a href="/learn/" class="btn btn-success btn-lg px-4">Learn</a>
+        </p>
+      </div>
+
+      <img class="col-md-4"
+           style="background: white; padding:1em; width:25%"
+           src="/img/key-logo.png" alt="">
+    </div>
+
+    <hr class="col-3 col-md-2 mb-5">
+
+    <div class="row g-5">
+      <div class="col-md-6">
+        <h2>Ready for Formal Verification?</h2>
+        <p>
+          We provide simple template projects that you can quickly
+          duplicate to a new repository for a quick start with KeY.
+        </p>
+        <ul class="icon-list ps-0">
+          <li class="d-flex align-items-start mb-1">
+            <a href="https://github.com/KeYProject/verification-project-template" rel="noopener" target="_blank">Template
+              for projects in which you verify Java code. </a></li>
+          <li class="text-muted d-flex align-items-start mb-1">
+            <a href="https://github.com/KeYProject/key-java-example">
+              An example to show you how to use KeY in your own project.
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Guides</h2>
+        <p>
+          Read more detailed instructions and documentation on using
+          or contributing to Bootstrap.
+        </p>
+        <ul class="icon-list ps-0">
+          <li class="d-flex align-items-start mb-1">
+            <a href="/docs/5.2/getting-started/introduction/">Bootstrap quick start guide</a>
+          </li>
+          <li class="d-flex align-items-start mb-1">
+            <a href="/docs/5.2/getting-started/webpack/">Bootstrap Webpack guide</a>
+          </li>
+          <li class="d-flex align-items-start mb-1">
+            <a href="/docs/5.2/getting-started/parcel/">Bootstrap Parcel guide</a>
+          </li>
+          <li class="d-flex align-items-start mb-1">
+            <a href="/docs/5.2/getting-started/contribute/">Contributing to Bootstrap</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="col-3 col-md-2 mb-5">
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="/img/KeY_Example_cropped.png" class="card-img-top"
+               style="height:20rem"
+               alt="Functional Verification">
+          <div class="card-body">
+            <h5 class="card-title">Functional Verification</h5>
+            <p class="card-text">
+              Tired of experiencing bugs that weren't covered by your test cases
+              before? KeY lets you augment your Java program with
+              a specification written in the Java Modeling Language JML and
+              helps you proving that your program behaves as it should.
+
+              KeY lets you specify the desired behavior of your
+              program in the well-known specification language JML, and
+              helps you proving that your programs conforms to its
+              specification. That way, you did not only show that your
+              program behaves as expected for some set of test values -
+              you <em>proved</em> that it works correctly for
+              <em>all possible values</em>!
+            </p>
+            <a class="btn btn-primary" href="/applications/program-verification/">Go beyond testing - start proving!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="/img/SED-featurette.png" class="card-img-top" alt="..."
+                         style="height:20rem">
+          <div class="card-body">
+            <h5 class="card-title">Symbolic Debugging</h5>
+            <h6>The next-generation debugger.</h6>
+            <p class="card-text">
+              Debugging sucks! Well, not if you're using our Symbolic Execution
+              Debugger. Profit from a graphical visualization of the program's
+              execution flow, state inspection and various other features to
+              quickly uncover undesired behavior!
+            </p>
+            <p>
+              Imagine that you start debugging <em>without having to think of particular input values</em>.
+              Your debugger instantly tells you that part of your code is unreachable, shows you <em>all
+              feasible runs in a beautiful graph</em> and gives you graphical hints on <em>where the problem
+              you're after could possibly hide</em>. While performing all this magic, it gracefully <em>integrates
+              within the Eclipse IDE</em> and offers tools (breakpoints etc.) that you know from the debuggers of
+              yesterday. <strong><a href="/applications/debugging/">Meet the Symbolic Execution Debugger!</a></strong>
+            </p>
+
+            <a href="/applications/debugging/" class="btn btn-primary">Symbolic Debugging</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="/img/lecture-hall.png" class="card-img-top"
+               alt="a lecture hall" style="height:20rem"/>
+          <div class="card-body">
+            <h5 class="card-title">Teaching and Research</h5>
+            <p class="card-text">
+              KeY is already used extensively for teaching at
+              different universities. Use the tool's possibilities for
+              teaching your students important concepts like design by
+              contract, applied logics and program verification. Or
+              use KeY for realizing your research project.
+            </p>
+
+            <p>
+              Use our tool to demonstrate to your students that <em>formal
+              concepts, like first-order logic, Hoare logic and
+              symbolic execution</em>, are not just dry theoretical
+              ideas, but are <em>practically used</em> and even <em>integrated
+                into the IDE they know</em>.
+            </p>
+            <a class="btn btn-primary"
+               href="/applications/key-for-teaching/">Teaching</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="col-3 col-md-2 mb-5">
+
+    <div>
+      <h2>Recent News</h2>
+      {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
+      {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
+      {{ range (first 3 $section) }}
+        {{ .Render "summary" }}
+      {{ end }}
+    </div>
+  </main>
+{{ end }}
