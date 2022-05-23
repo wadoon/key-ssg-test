@@ -49,9 +49,6 @@ pages:
   - hugo
   - ls -lr public 
   - scp -vpr public/* ${SECRET_USER}@${HOST}:${REMOTE_FOLDER}
-  artifacts:
-    paths:
-    - public
   only:
   - master
 
