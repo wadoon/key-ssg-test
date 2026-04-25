@@ -1,0 +1,86 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta property="og:title" content="KeY Setup Instructions"><meta property="og:description" content="The instructions in this page should help you setting up the KeY development environment for the HacKeYthon. In case of any problems, please contact Dominic Steinhöfel before the event. The goal is that every participant has a working development environment set up before the HacKeYthon.
+General Instructions Download the KeY bootstrap archive. This archive contains the recommended file structure, a script for starting Eclipse with the right parameters, and a convenience script for Linux 64bit systems for performing most actions outlined in the following automatically."><meta property="og:type" content="article"><meta property="og:url" content="https://key-project.org/hugo/key-symposium/1st-hackeython-2018/key-setup-instructions/"><meta property="article:section" content="key-symposium"><meta property="article:published_time" content="2018-11-22T17:19:50+01:00"><meta property="article:modified_time" content="2018-11-22T17:19:50+01:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="KeY Setup Instructions"><meta name=twitter:description content="The instructions in this page should help you setting up the KeY development environment for the HacKeYthon. In case of any problems, please contact Dominic Steinhöfel before the event. The goal is that every participant has a working development environment set up before the HacKeYthon.
+General Instructions Download the KeY bootstrap archive. This archive contains the recommended file structure, a script for starting Eclipse with the right parameters, and a convenience script for Linux 64bit systems for performing most actions outlined in the following automatically."><link rel=canonical href=https://key-project.org/hugo/key-symposium/1st-hackeython-2018/key-setup-instructions/><title>KeY Setup Instructions | KeY Project</title><link rel=stylesheet href=https://key-project.org/hugo/css/bootstrap.min.css><link href=https://key-project.org/hugo/css/style.css rel=stylesheet></head><body><header class=blog-header><nav class="navbar navbar-expand-md navbar-light bg-light"><div class=container-fluid><a class=navbar-brand href=https://key-project.org/hugo/>KeY Project</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNav aria-controls=navbarNav aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-between" id=navbarNav><ul class=navbar-nav><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/news/>News</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/learn/>Learn</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/applications/>Applications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/download/>Download</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/publications/>Publications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/about/>About</a></li></ul></div></div></nav></header><div class=container><div class=row><div class="col-12 col-lg-8 blog-main"><header><h2 class=blog-post-title><a class="text-dark text-decoration-none" href=https://key-project.org/hugo/key-symposium/1st-hackeython-2018/key-setup-instructions/>KeY Setup Instructions</a></h2><div class="blog-post-date text-secondary"><time datetime=2018-11-22>Nov 22, 2018</time>
+<span rel=author>Dominic Steinhöfel</span></div><hr></header><article class=blog-post><p>The instructions in this page should help you setting up the KeY
+development environment for the HacKeYthon. In case of any problems,
+please contact <a href=https://www.key-project.org/about/people/>Dominic Steinhöfel</a> before the
+event. The goal is that every participant has a working development
+environment set up before the HacKeYthon.</p><h2 id=general-instructions>General Instructions</h2><ol><li>Download the <a href=https://www.key-project.org/material/KeYBootstrap.zip>KeY bootstrap archive</a>.
+This archive contains the recommended file structure, a script for
+starting Eclipse with the right parameters, and a convenience
+script for Linux 64bit systems for performing most actions outlined
+in the following automatically.</li><li>Extract the contents of the archive to the destination where you
+want your shiny new KeY workspace to appear, for instance in your
+home directory (such that you have the folder “key-workspace” in
+“/home/yourusername/”).</li><li>Make sure you have Git installed on your system. For Windows, there
+is <a href=https://git-scm.com/download/win>Git for Windows</a>, on
+Debian-like systems, you can run “sudo apt-get install git” from
+a shell.</li><li>Also make sure you have access to the <a href=https://git.key-project.org>KeY
+GitLab</a>. You should furthermore have
+created an SSH key on your system which you registered there.
+Instructions are available at the <a href=https://docs.gitlab.com/ee/ssh/>GitLab help
+page</a> (sections “Generating a new
+SSH key pair” and “Adding an SSH key to your GitLab account”).</li></ol><h2 id=download-eclipse-check-out-the-git-repository-install-plugins-import-projects>Download Eclipse, Check Out the Git Repository, Install Plugins, Import Projects</h2><p>The following subsections are mutually exclusive; please choose the
+one that applies to you.</p><h3 id=linux-64-bit-script-recommended>Linux 64 bit, Script [recommended]</h3><ol><li>Run the script “setup.sh” by calling “./setup.sh” from the command
+line in the directory to which you unzipped the archive.</li></ol><h3 id=manual-process>Manual Process</h3><p>The following instructions should apply to all operating systems.
+Windows users should interpret “/” as “\” for the directory
+separators.</p><ol><li>Download the “Eclipse IDE for Java Developers” package which
+applies to your system from the <a href=https://www.eclipse.org/downloads/packages/>Eclipse download
+page</a>.</li><li>Extract the contents of the archive to
+“key-workspace/Tools/eclipse/”. Inside this directory you should
+find the Eclipse executable.</li><li>Change to the directory “key-workspace/GIT/”.</li><li>There, run “git clone <a href=mailto:git@git.key-project.org>git@git.key-project.org</a>:key/key.git”.</li><li>Open eclipse via the scripts “eclipse” or “eclipse.bat” (Windows)
+in the directory “key-workspace/Development/KeY/eclipse”.</li><li>Install the following plugins via “Help > Install New Software”,
+selecting the update site “2018-09 –
+<a href=http://download.eclipse.org/releases/2018-09>http://download.eclipse.org/releases/2018-09</a>”:<ol><li>“EMF – Eclipse Modeling Framework SDK”,</li><li>“OCL Classic SDK: Ecore/UML Parsers,Evaluator,Edit”,</li><li>“Graphical Modeling Framework (GMF) Runtime SDK”,</li><li>“GEF Common SDK”,</li><li>“SWTBot for Eclipse Testing”,</li><li>“SWTBot for GEF Testing”,</li><li>“SWTBot for SWT Testing”,</li><li>“SWTBot IDE Features”,</li><li>“Graphiti (Incubation)”</li></ol></li><li>Restart when prompted.</li><li>Import all KeY eclipse projects via “File > Import > General
+> Existing Projects into Workspace”, selecting
+“key-workspace/GIT/key/” as the root directory (choose “Select
+All”).</li></ol><h2 id=troubleshooting-compilation-errors>Troubleshooting Compilation errors</h2><p>Please open eclipse via the scripts “eclipse” or “eclipse.bat”
+(Windows) in the directory “key-workspace/Development/KeY/eclipse”.
+You might encounter various compilation problems that I try to address
+in the following.</p><p>Since you imported all projects (either automatically or manually),
+there will also be the project “BankJML” which shows various errors.
+Just remove it (without deleting it from the workspace), you won’t
+need it.</p><p>In the class “JDTUtil”, you could observe an error like “Access
+restriction: The method
+‘JavaElementLabelComposerCore.appendTypeLabel(IType, long)’ is not API
+…”. Resolve this by navigating to the problematic file, clicking on
+the error and choosing the quick fix (Ctrl + 1, “Configure Problem
+Severity”), clicking on “Configure Project Settings”, and then setting
+the rule for “Forbidden reference” to “Warning”. This should solve it.</p><p>If you are reported errors like missing projects “key.util” which are
+though not missing, try to remove the projects from the workspace
+(choose to not delete them from the disk) and importing them again
+(from the directory “key-workspace/GIT/”). Don’t import BankJML again.</p><p>If you encounter a compilation error in the “key.core.test” package,
+because of the missing folder “genSrc”, resolve this by moving to the
+directory “key-workspace/GIT/key/key/key.core.test/” and running “ant
+generateproofcollectionparser”. You can also run this ant goal via the
+eclipse ant view (Window > Show View > Other > Ant), then you
+don’t need to use the command line.</p><p>After and between those steps, try a “Project -> Clean” with “Clean
+all projects” set. You might have to run the aforementioned ant
+command again. Now you hopefully don’t see any more errors…</p><h2 id=code-convention-settings>Code Convention Settings</h2><p>Now, the time has come to apply some settings contributing to the
+conformance of your newly written code with the KeY coding guidelines.</p><h3 id=code-formatter>Code Formatter</h3><p>Open “Window > Preferences”, choose “Java > Code Style >
+Formatter”. In the dialog, choose “Import” for importing a new
+profile, navigate to “key-workspace/GIT/key/key/doc” and choose
+“KeYCodeStyle.xml”. I personally edited the style to allow for
+“on/off” tags in the code that are spared by auto formatting, such
+that commented out code or extraordinary code snippets with special
+formatting are not messed up. For that, choose “Edit”, “Off/on Tags”,
+“Enable Off/On tags”.</p><h3 id=user-name-in-comments>User Name in Comments</h3><p>In the preferences dialog, go to “Java > Code Style > Code
+Templates”, choose “Comments > Types” there and edit the style by
+replacing the “${user}” placeholder with your real name (without
+German Umlauts or other special characters!).</p><h3 id=configure-auto-save-actions>Configure Auto Save Actions</h3><p>There are some things which can automatically be done when saving
+which increase the code quality a little. In the preferences window,
+navigate to “Java > Editor > Save Actions” and check “Perform
+the selected actions on save”. Then check “Organize imports” and
+“Additional actions” (don’t check “Format source code”, since it’s bad
+for version control when you’re editing previously existing classes),
+and click on “configure”. In the appearing dialog, check “Remove
+trailing whitespace” and “Correct indentation”. Make absolutely sure
+that you <em>don’t</em> check “Sort members” since it’s a nightmare for
+version control. Everything else should be left as-is.</p><p>Click “Apply and Close” in the preferences window.</p><h2 id=run-key-and-the-test-suite>Run KeY and the Test Suite</h2><p>Once you set up KeY, you should try to run the KeY GUI and the default
+test suite. For this, first open the class “de.uka.ilkd.key.core.Main”
+in the “key.ui” project and run it as a Java application; this should
+produce you the KeY GUI. After that, try out
+“de.uka.ilkd.key.suite.TestKey” in “key.core.test” (run as JUnit test
+suite).</p><footer></footer></article></div></div></div><footer class="blog-footer w-100"><nav class="navbar navbar-light bg-light"><p class="w-100 text-center"></p><p class="w-100 text-center"><a href=#></a></p></nav></footer><script src=https://key-project.org/hugo/js/bootstrap.bundle.min.js></script></body></html>

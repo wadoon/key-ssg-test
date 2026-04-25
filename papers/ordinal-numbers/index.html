@@ -1,0 +1,75 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta property="og:title" content="A Mechanizable First-Order Theory of Ordinals"><meta property="og:description" content="Peter H. Schmitt: A Mechanizable First-Order Theory of Ordinals. In: Schmidt, Renate A.; Nalon, Claudia (Ed.): Automated Reasoning with Analytic Tableaux and Related Methods - 26th International Conference, {TABLEAUX} 2017, Brasilia, Brazil, September 25-28, 2017, Proceedings, pp. 331–346, Springer, 2017, ISBN: 978-3-319-66901-4
+Abstract We present a first-order theory of ordinals without resorting to set theory. The theory is implemented in the KeY program verification system which is in turn used to prove termination of a Java program computing the Goodstein sequences."><meta property="og:type" content="article"><meta property="og:url" content="https://key-project.org/hugo/papers/ordinal-numbers/"><meta property="article:section" content="papers"><meta property="article:published_time" content="2017-09-06T12:00:00+01:00"><meta property="article:modified_time" content="2017-09-06T12:00:00+01:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="A Mechanizable First-Order Theory of Ordinals"><meta name=twitter:description content="Peter H. Schmitt: A Mechanizable First-Order Theory of Ordinals. In: Schmidt, Renate A.; Nalon, Claudia (Ed.): Automated Reasoning with Analytic Tableaux and Related Methods - 26th International Conference, {TABLEAUX} 2017, Brasilia, Brazil, September 25-28, 2017, Proceedings, pp. 331–346, Springer, 2017, ISBN: 978-3-319-66901-4
+Abstract We present a first-order theory of ordinals without resorting to set theory. The theory is implemented in the KeY program verification system which is in turn used to prove termination of a Java program computing the Goodstein sequences."><link rel=canonical href=https://key-project.org/hugo/papers/ordinal-numbers/><title>A Mechanizable First-Order Theory of Ordinals | KeY Project</title><link rel=stylesheet href=https://key-project.org/hugo/css/bootstrap.min.css><link href=https://key-project.org/hugo/css/style.css rel=stylesheet></head><body><header class=blog-header><nav class="navbar navbar-expand-md navbar-light bg-light"><div class=container-fluid><a class=navbar-brand href=https://key-project.org/hugo/>KeY Project</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNav aria-controls=navbarNav aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-between" id=navbarNav><ul class=navbar-nav><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/news/>News</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/learn/>Learn</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/applications/>Applications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/download/>Download</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/publications/>Publications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/about/>About</a></li></ul></div></div></nav></header><div class=container><div class=row><div class="col-12 col-lg-8 blog-main"><header><h2 class=blog-post-title><a class="text-dark text-decoration-none" href=https://key-project.org/hugo/papers/ordinal-numbers/>A Mechanizable First-Order Theory of Ordinals</a></h2><div class="blog-post-date text-secondary"><time datetime=2017-09-06>Sep 6, 2017</time>
+<span rel=author>Peter H. Schmitt</span></div><hr></header><article class=blog-post><blockquote><p>Peter H. Schmitt: A Mechanizable First-Order Theory of Ordinals. In:
+Schmidt, Renate A.; Nalon, Claudia (Ed.): Automated Reasoning with
+Analytic Tableaux and Related Methods - 26th International
+Conference, {TABLEAUX} 2017, Brasilia, Brazil, September 25-28,
+2017, Proceedings, pp. 331–346, Springer, 2017, ISBN:
+978-3-319-66901-4</p></blockquote><h2 id=abstract>Abstract</h2><p>We present a first-order theory of ordinals without resorting to set
+theory. The theory is implemented in the KeY program verification
+system which is in turn used to prove termination of a Java program
+computing the Goodstein sequences.</p><p><a href=https://dx.doi.org/10.1007/978-3-319-66902-1_20>doi:10.1007/978-3-319-66902-1_20</a></p><h2 id=key-version-with-ordinal-number-support>KeY Version with Ordinal Number Support</h2><p>KeY requires Java version 8 or newer and is tested on Linux, OS X and
+Microsoft Windows.</p><ul><li><p>Instant Start: <a href=https://formal.iti.kit.edu/key/tableaux17/webstart/KeY.jnlp>Web Start</a></p></li><li><p>Binary Version: <a href=https://formal.iti.kit.edu/key/tableaux17/key-2.5_d2d1b7463a24ad5aab7d217e8ab9e5ca13a01496.zip>KeY</a></p></li><li><p>Source Code: <a href=https://formal.iti.kit.edu/key/tableaux17/key-src-2.5_d2d1b7463a24ad5aab7d217e8ab9e5ca13a01496.zip>KeY-src.zip</a></p></li><li><p><a href=https://formal.iti.kit.edu/pschmitt/Tableau2017/GoodsteinBig.java>GoodsteinBig.java</a>
+This program computes Goodstein sequences using Java’s BigInteger
+class. This program is not mentioned in the paper.</p></li><li><p><a href=https://formal.iti.kit.edu/pschmitt/Tableau2017/Goodstein.java>Goodstein.java</a>
+The file <code>Goodstein.java</code> contains the Java program that is analysed
+in the paper. It does not correctly compute Goodstein sequences once
+they grow beyond maxInt. But, since in the default setting KeY
+treats Java integers as mathematical integer the performed analysis
+is correct.</p><p>In the paper the JML annotations of “Goodstein.java” have been
+reduced to the essential core. Here the full annotation is shown. Also
+the auxiliary method for computing exponentials “intPow” is included</p></li><li><p><a href=https://formal.iti.kit.edu/pschmitt/Tableau2017/ProgrammProofs.tar>Program Correctness Proofs</a>
+This tarfile contains the proofs of the contracts of the three
+methods in “Goodstein.java”. Proof files can be loaded in the KeY
+system the same way as annotated Java programs: in the pull-down
+menue “file” choose “load” and select the wanted proof file. After
+loading you may inspect the finished proof. To keep things simple
+the unpacked proof files should be placed in the same directory as
+Goodstein.java.</p></li><li><p>The <a href=Ord.pdf>technical report</a> contains
+more material than could be covered in the page resticted paper.</p></li><li><p>The program correctness proofs use a number of lemmas on ordinals,
+the embedding of positive integers into ordinals, and termination
+functions introduced for Goodstein sequences. Proofs of these lemmas
+are contained in the zip-files
+<a href=OrdProofs1.zip>OrdProofs1</a>
+<a href=OrdProofs2.zip>OrdProofs2</a>
+<a href=OrdProofs3.zip>OrdProofs3</a>
+respectively. The files in these zip-archives use KeY internal
+names. The correspondence between the lemma whose proof you want to
+inspect and the name of the proof file can be retrieved from
+<a href=Fml2Taclets.pdf>Fml2Taclet</a>.
+To inspect the proofs, start the KeY system and select in the
+pull-down menue “file” subitem “load” the wanted proof file. Proof
+files come with extensions .key or .proof. The user will not note
+any difference after loading them. The .proof files contain saved
+finished proofs. The .key files contain commands of a simple,
+experimental scripting language that construct the proof on the fly.
+In some rare cases the proof in a .key file does not complete. It
+has to be completed manually, which is in all cases trivial if you
+know how to handle the prover. This phenomenon is due to
+deficiencies of the scripting language.</p></li><li><p><a href=http://formal.iti.kit.edu/key/tableaux17/webstart/KeY.jnlp>Run KeY via Webstart</a></p></li></ul><h2 id=bibtex>BibTeX</h2><pre tabindex=0><code>@inproceedings{Schmitt2017,
+  title = {A Mechanizable First-Order Theory of Ordinals},
+  author = {Peter H. Schmitt},
+  editor = {Renate A. Schmidt and Claudia Nalon},
+  url = {https://www.key-project.org/papers/ordinal-numbers},
+  doi = {10.1007/978-3-319-66902-1_20},
+  isbn = {978-3-319-66901-4},
+  year  = {2017},
+  date = {2017-09-06},
+  urldate = {2017-09-06},
+  booktitle = {Automated Reasoning with Analytic Tableaux and Related Methods - 26th
+               International Conference, {TABLEAUX} 2017, Brasilia, Brazil, September 25-28, 2017, Proceedings},
+  volume = {10501},
+  pages = {331--346},
+  publisher = {Springer},
+  series = {Lecture Notes in Computer Science},
+  abstract = {We present a first-order theory of ordinals without resorting to set theory. The theory is implemented in the
+              KeY program verification system which is in turn used to prove termination of a Java program computing 
+              the Goodstein sequences.},
+  keywords = {theorem proving},
+  pubstate = {published},
+  tppubtype = {inproceedings}
+}
+</code></pre><footer></footer></article></div></div></div><footer class="blog-footer w-100"><nav class="navbar navbar-light bg-light"><p class="w-100 text-center"></p><p class="w-100 text-center"><a href=#></a></p></nav></footer><script src=https://key-project.org/hugo/js/bootstrap.bundle.min.js></script></body></html>

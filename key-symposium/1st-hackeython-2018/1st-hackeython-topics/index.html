@@ -1,0 +1,66 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta property="og:title" content="1st HacKeYthon Topics"><meta property="og:description" content="During the first HacKeYthon, we will together approach the following list of topics, each of which will be assigned a team of 3 to 5 participants, one of which will be the group speaker.
+Interaction Logging Group Speaker: Alexander Weigl
+Our Motivation “How long did you need for the proof?” is the most typical advisor question at the end of a thesis about proofing the correctness of software with KeY. Beside, the concrete numbers of the proof tree metrics and prover run-time, we do not have any measurements of the under taking interactions on the proof and in the tool."><meta property="og:type" content="article"><meta property="og:url" content="https://key-project.org/hugo/key-symposium/1st-hackeython-2018/1st-hackeython-topics/"><meta property="article:section" content="key-symposium"><meta property="article:published_time" content="2018-11-09T09:54:23+01:00"><meta property="article:modified_time" content="2018-11-09T09:54:23+01:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="1st HacKeYthon Topics"><meta name=twitter:description content="During the first HacKeYthon, we will together approach the following list of topics, each of which will be assigned a team of 3 to 5 participants, one of which will be the group speaker.
+Interaction Logging Group Speaker: Alexander Weigl
+Our Motivation “How long did you need for the proof?” is the most typical advisor question at the end of a thesis about proofing the correctness of software with KeY. Beside, the concrete numbers of the proof tree metrics and prover run-time, we do not have any measurements of the under taking interactions on the proof and in the tool."><link rel=canonical href=https://key-project.org/hugo/key-symposium/1st-hackeython-2018/1st-hackeython-topics/><title>1st HacKeYthon Topics | KeY Project</title><link rel=stylesheet href=https://key-project.org/hugo/css/bootstrap.min.css><link href=https://key-project.org/hugo/css/style.css rel=stylesheet></head><body><header class=blog-header><nav class="navbar navbar-expand-md navbar-light bg-light"><div class=container-fluid><a class=navbar-brand href=https://key-project.org/hugo/>KeY Project</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNav aria-controls=navbarNav aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-between" id=navbarNav><ul class=navbar-nav><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/news/>News</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/learn/>Learn</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/applications/>Applications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/download/>Download</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/publications/>Publications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/about/>About</a></li></ul></div></div></nav></header><div class=container><div class=row><div class="col-12 col-lg-8 blog-main"><header><h2 class=blog-post-title><a class="text-dark text-decoration-none" href=https://key-project.org/hugo/key-symposium/1st-hackeython-2018/1st-hackeython-topics/>1st HacKeYthon Topics</a></h2><div class="blog-post-date text-secondary"><time datetime=2018-11-09>Nov 9, 2018</time>
+<span rel=author>Dominic Steinhöfel</span></div><hr></header><article class=blog-post><p>During the <a href=key-symposium/1st-hackeython-2018/>first HacKeYthon</a>, we
+will together approach the following list of topics, each of which
+will be assigned a team of 3 to 5 participants, one of which will be
+the group speaker.</p><h2 id=interaction-logging>Interaction Logging</h2><p><strong>Group Speaker</strong>: Alexander Weigl</p><h3 id=our-motivation>Our Motivation</h3><p>“How long did you need for the proof?” is the most typical advisor
+question at the end of a thesis about proofing the correctness of
+software with KeY. Beside, the concrete numbers of the proof tree
+metrics and prover run-time, we do not have any measurements of the
+under taking interactions on the proof and in the tool. Although,
+interactions are the key aspect of KeY and proofs of complex software
+rely on them.</p><h3 id=our-goal>Our Goal</h3><p>Our goal is split into two areas:</p><ul><li>First, we will capture the interactive rule applications. This
+allows a simpler and smaller storage format for proves and also an
+export of proof-scripts (Ulbrich- or KPS-style).<ul><li>This sub-goal tries to close a gap between KeY and PSDBG, and
+also makes a proof more comprehensible.</li></ul></li><li>Second, we will introduces quantitative metrics for measuring the
+labour and interaction complexity of the proof construction.</li><li>How long was KeY focused?</li><li>How often was the proof reloaded?</li><li>Number of interactive prunes, quantifications, cuts, …?</li><li>Time until a new branch was closed.</li><li>…</li></ul><h3 id=our-objectives>Our Objectives</h3><p>Following working points have been identified. Note, preparations can
+be found in
+<a href=https://git.key-project.org/key/key/merge_requests/84>https://git.key-project.org/key/key/merge_requests/84</a>.</p><h4 id=first-goal>First Goal</h4><ul><li>Finding the crosspoints for injection of interaction recording.
+(Crosspoints found for macros and rules).</li><li>View of current logged interactions.</li><li>Saving the user interaction along the proof.</li><li>Export into a new proof storage format and proof reconstruction.</li><li>Export into proof scripts.</li></ul><h4 id=second-goal>Second goal</h4><ul><li>Defining a framework for UI metrics<ul><li>flexible model classes</li><li>storing and loading of UI metrics</li><li>add actions to the UI</li></ul></li><li>Defining and Implementing the UI metrics.<br>Following list is a suggestion:<ul><li>Focus time of KeY and the prove</li><li>Number of proof reloads</li><li>Number of proof switches</li><li>Number of interactive rule and macro applications by type.</li><li>Life span of a branch</li><li>Number of focus switches</li></ul></li></ul><h2 id=proof-management>Proof Management</h2><p><strong>Group speaker</strong>: Wolfram Pfeifer</p><p>We aim to develop a project-based display of the total proof state of
+a system. This should answer the question of when a system actually
+can be categorized as being proven, and furthermore provide
+a visualization of finished and open proofs for all proof obligations
+associated to the system for a better overview and usability of KeY
+for larger systems. One key point is the checking cyclic dependencies
+between contracts, since this signals a soundness issue.</p><h2 id=gui-dialog-streamlining-and-extensions-for-easier-accessibility>GUI Dialog Streamlining and Extensions for Easier Accessibility</h2><p><strong>Group speaker</strong>: Michael Kirsten</p><p>Within this topic, we aim to make KeY’s GUI more robust and
+accessible. This also includes making features accessible within the
+GUI, which are currenty only or mostly accessible under the hood,
+e.g., via extending KeY’s source code. Besides systematically
+restructuring KeY’s graphical user interface, this topic includes
+a variety of smaller tasks which extend the GUI. In the following, you
+can find an incomplete list, which will be extended before the
+HacKeYthon and also leaves space for the participants’ suggestions.</p><ul><li>Concerns GUI of KeY tool</li><li>Systematic conceptual rework of (type of) availability of current
+settings and switches in GUI dialogues</li><li>Possibly (better) integration of currently badly-integrated or
+poorly-available settings and display options in uniform GUI
+dialogues</li><li>Generally (more) uniform look and feel etc.</li><li>Generally making proof settings more robust</li><li>Possibly (better) integration of taclet options such that no loaded
+proof goal is needed (which currently makes them non-available in
+KeY files)</li><li>Possibly creating a small proof macro toolkit (in KeY’s GUI) using,
+currently only via KeY’s source code available, abstract proof
+macros</li></ul><h2 id=parallelization-simultaneous-proving-of-distinct-branches>Parallelization: Simultaneous Proving of Distinct Branches</h2><p><strong>Group speaker</strong>: Richard Bubel</p><p>As KeY is based on a sequent calculus which leads to proofs quickly
+branching into subtrees, it is a natural optimization to parallelize
+the proving of the subtrees within the system. We believe that this
+would signify an immense performance boost for KeY, making it possible
+to approach larger programs within acceptable time (well, if there’s
+sufficient memory). This is though a non-trivial undertaking since KeY
+hasn’t been built for this, which is why some refactoring will be
+needed to accomplish this goal. On the other hand, recent changes
+regarding decentralized handling of namespaces within KeY already
+should make it simpler to parallelize processing of individual goals.
+This project will enable you to deeply dive into the system and
+achieve a major improvement in case of success.</p><h2 id=abstract-data-types-for-key>Abstract Data Types for KeY</h2><p><strong>Group speaker</strong>: Dominic Steinhöfel</p><p>Abstract data types are an easy-to-use and concise technique for
+implementing and specifying programs. So far, KeY supports the
+definition of sorts and functions on sorts that can be used in problem
+statements and specifications. We aim to extend this in two ways:
+First, provide a nice concrete syntax for defining abstract datatypes
+within .key files in the flavor of Haskell, Coq etc. and integrate
+this well with the system, and second, also make it possible to
+directly specify and use them within JML (where so far, you cannot
+define sorts and function symbols). In this project, we’ll deal with
+KeY’s parsers and very basic building blocks like sorts, functions,
+namespaces etc. One goal is to also elaborate some nice examples where
+ADTs help in specifying a problem.</p><footer></footer></article></div></div></div><footer class="blog-footer w-100"><nav class="navbar navbar-light bg-light"><p class="w-100 text-center"></p><p class="w-100 text-center"><a href=#></a></p></nav></footer><script src=https://key-project.org/hugo/js/bootstrap.bundle.min.js></script></body></html>

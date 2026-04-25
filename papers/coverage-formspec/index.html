@@ -1,0 +1,94 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta property="og:title" content="Coverage of Formal Specifications"><meta property="og:description" content="Contents Source code and Strongest Specification for “find” Different Specifications for “find” Coverage Results for “find” Specifications Tool Download and Usage Instructions This page supplies additional material for the extended abstract “Assessing the Coverage of Formal Specifications“, submitted to the PhD symposium “Algorithms, Tools and Applications” at iFM 2017.
+In the extended abstract, we discussed a simple “find” method trying to discover an element in an integer array and returning its index, or -1 if the element was not present."><meta property="og:type" content="article"><meta property="og:url" content="https://key-project.org/hugo/papers/coverage-formspec/"><meta property="article:section" content="papers"><meta property="article:published_time" content="2017-06-29T11:33:53+01:00"><meta property="article:modified_time" content="2017-06-29T11:33:53+01:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Coverage of Formal Specifications"><meta name=twitter:description content="Contents Source code and Strongest Specification for “find” Different Specifications for “find” Coverage Results for “find” Specifications Tool Download and Usage Instructions This page supplies additional material for the extended abstract “Assessing the Coverage of Formal Specifications“, submitted to the PhD symposium “Algorithms, Tools and Applications” at iFM 2017.
+In the extended abstract, we discussed a simple “find” method trying to discover an element in an integer array and returning its index, or -1 if the element was not present."><link rel=canonical href=https://key-project.org/hugo/papers/coverage-formspec/><title>Coverage of Formal Specifications | KeY Project</title><link rel=stylesheet href=https://key-project.org/hugo/css/bootstrap.min.css><link href=https://key-project.org/hugo/css/style.css rel=stylesheet></head><body><header class=blog-header><nav class="navbar navbar-expand-md navbar-light bg-light"><div class=container-fluid><a class=navbar-brand href=https://key-project.org/hugo/>KeY Project</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNav aria-controls=navbarNav aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-between" id=navbarNav><ul class=navbar-nav><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/news/>News</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/learn/>Learn</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/applications/>Applications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/download/>Download</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/publications/>Publications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/about/>About</a></li></ul></div></div></nav></header><div class=container><div class=row><div class="col-12 col-lg-8 blog-main"><header><h2 class=blog-post-title><a class="text-dark text-decoration-none" href=https://key-project.org/hugo/papers/coverage-formspec/>Coverage of Formal Specifications</a></h2><div class="blog-post-date text-secondary"><time datetime=2017-06-29>Jun 29, 2017</time>
+<span rel=author>Dominic Steinhöfel</span></div><hr></header><article class=blog-post><h5 id=contents>Contents</h5><ul><li><a href=#Source_code_and_Strongest_Specification_for_8220find8221>Source code and Strongest Specification for “find”</a></li><li><a href=#Different_Specifications_for_8220find8221>Different Specifications for “find”</a></li><li><a href=#Coverage_Results_for_8220find8221_Specifications>Coverage Results for “find” Specifications</a></li><li><a href=#Tool_Download_and_Usage_Instructions>Tool Download and Usage Instructions</a></li></ul><p>This page supplies additional material for the extended abstract
+“<em>Assessing the Coverage of Formal Specifications</em>“, submitted to the
+PhD symposium “Algorithms, Tools and Applications” at iFM 2017.</p><p>In the extended abstract, we discussed a simple “find” method trying
+to discover an element in an integer array and returning its index,
+or -1 if the element was not present. In the section below, you find
+the source code of the method, along with the strongest JML
+specification that we discovered using our tool. Afterward, we
+present several specifications and the results produced for them by
+the tool. Finally, we provide an executable of the prototype with
+some usage instructions.</p><p><strong>Update</strong> (2017/10/09): There is a new version of the tool which
+deviates in its output from the one discussed in the extended
+abstract. You find it
+<a href=https://www.key-project.org/wp-content/uploads/2017/10/SpecCov.zip>here</a>.
+The category of “use case facts” has been removed, the output is more
+verbose, and it features the possibility of interaction with the
+generated proof (e.g., to manually recover from prover incapacities).
+Also, the GUI has been improved.</p><h2 id=source-code-and-strongest-specification-for-find>Source code and Strongest Specification for “find”</h2><p><a href=https://gist.github.com/rindPHI/c0bf00c371e9491a7598840ec5063f91>https://gist.github.com/rindPHI/c0bf00c371e9491a7598840ec5063f91</a></p><h2 id=different-specifications-for-find>Different Specifications for “find”</h2><p>The following table shows the different specification versions for “find” which we studied, ordered by increasing strenght / coverage.</p><table><thead><tr><th>Name</th><th>Post Condition</th><th>Loop Invariant</th><th>Ghost variable</th><th>Ghost field</th></tr></thead><tbody><tr><td>SimplePost</td><td><code>\result == -1 || arr[\result] == n</code></td><td><code>true</code></td><td>X</td><td>X</td></tr><tr><td>StrongerInv</td><td><code>\result == -1 || arr[\result] == n</code></td><td><code>result == -1 || arr[result] == n</code></td><td>X</td><td>X</td></tr><tr><td>StrongerInvCaseDist</td><td><code>\result == -1 || arr[\result] == n</code></td><td><code>i >= 0 && i &lt;= arr.length && ( result != -1 || (\forall int k; k >= 0 && k &lt; i; arr[k] != n)) && ( result == -1 || arr[result] == n)</code></td><td>X</td><td>X</td></tr><tr><td>StrongerInvConcreteResult</td><td><code>\result == -1 || arr[\result] == n</code></td><td><code>i >= 0 && i &lt;= arr.length && ( result != -1 || (\forall int k; k >= 0 && k &lt; i; arr[k] != n)) && ( result == -1 || arr[result] == n && result == i-1)</code></td><td>X</td><td>X</td></tr><tr><td>StrongerPost</td><td><code>((\exists int i; i >= 0 && i &lt; arr.length; arr[i] == n) ==> arr[\result] == n) && ((\forall int i; i >= 0 && i &lt; arr.length; arr[i] != n) ==> \result == -1)</code></td><td><code>i >= 0 && i &lt;= arr.length && ( result != -1 || (\forall int k; k >= 0 && k &lt; i; arr[k] != n)) && ( result == -1 || arr[result] == n && result == i-1)</code></td><td>X</td><td>X</td></tr><tr><td>InvWithLastRun</td><td><code>((\exists int i; i >= 0 && i &lt; arr.length; arr[i] == n) ==> arr[\result] == n) && ((\forall int i; i >= 0 && i &lt; arr.length; arr[i] != n) ==> \result == -1)</code></td><td><code>i >= 0 && i &lt;= arr.length && i = iLastRun + 1 && ( result != -1 || (\forall int k; k >= 0 && k &lt; i; arr[k] != n)) && ( result == -1 || arr[result] == n && result == i-1)</code></td><td><code>ghost int iLastRun = i - 1;</code></td><td>X</td></tr><tr><td>PostWithLastRun</td><td><code>((\exists int i; i >= 0 && i &lt; arr.length; arr[i] == n) ==> arr[\result] == n && \result == f_iLastRun) && ((\forall int i; i >= 0 && i &lt; arr.length; arr[i] != n) ==> \result == -1)</code></td><td><code>i >= 0 && i &lt;= arr.length && i = f_iLastRun + 1 && ( result != -1 || (\forall int k; k >= 0 && k &lt; i; arr[k] != n)) && ( result == -1 || arr[result] == n && result == i-1)</code></td><td>X</td><td><code>ghost int f_iLastRun = i - 1;</code></td></tr></tbody></table><h2 id=coverage-results-for-find-specifications>Coverage Results for “find” Specifications</h2><p>The following table depicts the results produced by our implementation
+for the specification versions outlined above. “<strong>Strength 1</strong>” is
+a percentage coverage of <em>covered</em> and <em>abstractly covered</em> post
+condition, loop body and use case facts. “<strong>Strength 2</strong>” <em>only</em>
+considers <em>covered</em> post condition and loop body facts (so, <em>no</em> use
+case facts). “<strong>Strength 3</strong>” is an extension of “Strength 2” which
+also considers abstractly covered post condition and loop body facts.
+The values for “Strength 1” and “Strength 3” are <em>only monotonic from
+the third line on</em>, since in “SimplePost” and “StrongerInv”, there are
+<em>exception / use case facts uncovered</em> which makes it easier to
+abstractly cover facts (for instance, “true” abstractly covers all
+possible facts, but does not exclude any exception and usually does
+not imply any non-trivial method post condition).</p><table><thead><tr><th></th><th></th><th></th><th>Post Condition Facts</th><th>Loop Body Facts</th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Name</td><td># Uncovered Exception Facts</td><td># Uncovered Use Case Facts</td><td>Abstractly</td><td>Uncovered</td><td>Abstractly</td><td>Uncovered</td><td>Strength 1</td><td>Strength 2</td><td>Strength 3</td></tr><tr><td>SimplePost</td><td><strong>1</strong></td><td><strong>1</strong></td><td>1</td><td>1</td><td>1</td><td>1</td><td>30.00%</td><td>0.00%</td><td>37.50%</td></tr><tr><td>StrongerInv</td><td><strong>1</strong></td><td>0</td><td>2</td><td>0</td><td>4</td><td>0</td><td>57.14%</td><td>0.00%</td><td>50.00%</td></tr><tr><td>StrongerInvCaseDist</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>4</td><td>42.86%</td><td>0.00%</td><td>33.33%</td></tr><tr><td>StrongerInvConcreteResult</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>2</td><td>57.14%</td><td>33.33%</td><td>50.00%</td></tr><tr><td>StrongerPost</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>72.22%</td><td>50.00%</td><td>58.33%</td></tr><tr><td>InvWithLastRun</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>95.45%</td><td>87.50%</td><td>93.75%</td></tr><tr><td>PostWithLastRun</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100%</td><td>100%</td><td>100%</td></tr></tbody></table><p>The chart below illustrates the progession of the strength measures.</p><script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js type=text/javascript></script><div style=position:relative><canvas id=specStrChart></canvas></div><script type=text/javascript>var ctx=$("#specStrChart"),myLineChart=new Chart(ctx,{type:"line",data:{labels:["SimplePost","StrongerInv","StrongerInvCaseDist","StrongerInvConcreteResult","StrongerPost","InvWithLastRun","PostWithLastRun"],datasets:[{label:"Strength 1",data:[30,57.14,42.85,57.14,72.22,95.45,100],fill:!1,borderColor:"rgb(75, 192, 192)",lineTension:.1},{label:"Strength 2",data:[0,0,0,33.33,50,85.5,100],fill:!1,borderColor:"rgb(0, 255, 90)",lineTension:.1},{label:"Strength 3",data:[37.5,50,33.33,50,58.33,93.75,100],fill:!1,borderColor:"rgb(255, 162, 0)",lineTension:.1}]},options:{scales:{xAxes:[{ticks:{stepSize:1,min:0,autoSkip:!1}}],yAxes:[{ticks:{callback:function(e){return e+"%"}}}]}}})</script><h2 id=tool-download-and-usage-instructions>Tool Download and Usage Instructions</h2><p><a href=https://www.key-project.org/wp-content/uploads/2017/06/key-2.7_6492e8152c01b127137b403e8d24ee7521eb42e2.zip>Download the executable of the prototype</a></p><p>After downloading the above ZIP file, just unzip it anywhere on your
+drive. A Java Runtime Environment of version 8 or higher is required
+to start the KeY version linked on this page.</p><p>To execute the strength analysis CLI, run <code>java -cp KeY.jar de.tud.cs.se.ds.specstr.cli.Main</code>, which will display the following
+help:</p><pre tabindex=0><code>
+===========================================
+           This is  SpecStr v0.1          
+a tool for assessing the strength of formal
+ specifications using symbolic execution  
+===========================================
+
+
+usage: java -cp KeY.jar de.tud.cs.se.ds.specstr.cli.Main
+           [input Java file]
+           [fully qualified method name]
+-h,--help                   Display help (this text) and terminate
+-o,--out-file &lt;arg&gt;         Save output to this file
+-p,--proof-out-file &lt;arg&gt;   Save proof to this file
+</code></pre><p>For instance, starting it on the “find” method with the specification
+SimplePost (by executing <code>java -cp KeY.jar de.tud.cs.se.ds.specstr.cli.Main /path/to/Find.java "Find::find([II)I"</code>),</p><p>we obtain as output</p><pre tabindex=0><code>
+=====================
+Unhandled Exceptions:
+=====================
+
+Unclosed exception node &#34;Index Out of Bounds (_arr_0 != null, but i Out of Bounds!)&#34;, path condition: &#34;result_1_0 = -1 &amp; ( arr_0.length &gt; i_0 &amp; (arr_0.length &lt;= i_0 | i_0 &lt; 0))&#34;
+
+================
+Uncovered Facts:
+================
+
+Post condition implies final state fact, Path condition &#34;!result_1_0 = -1&#34;
+result = result_1_0
+
+Loop use case fact, Path condition &#34;!result_1_0 = -1&#34;
+arr_0[result_1_0]@heap[anon({}, anon_heap_LOOP)] = n
+
+=========================
+Abstractly Covered Facts:
+=========================
+
+Post condition implies final state fact, Path condition &#34;result_1_0 = -1 &amp; arr_0.length &lt;= i_0&#34;
+result = -1
+
+Loop body fact, Path condition &#34;result_1_0 = -1 &amp; (arr_0.length &gt; i_0 &amp; !arr_0[i_0] = n)&#34;
+i = 1 + i_0
+
+Loop body fact, Path condition &#34;result_1_0 = -1 &amp; (arr_0.length &gt; i_0 &amp; arr_0[i_0] = n)&#34;
+i = 1 + i_0
+
+Covered 3 (0 concretely, 3 abstractly) out of 5 facts
+Overall Strength:          30,00%
+Concrete Effects Strength: 0,00%
+Abstract Effects Strength: 37,50%
+</code></pre><p>The output can be written to a text file using the “-o” flag. With the
+“-p” flag, you can export the KeY proof tree (which is basically an
+extension of the symbolic execution tree) on which our analysis works.
+Then, you can start KeY by just running <code>java -jar KeY.jar</code> and
+loading the “.proof” file, and inspect the details of the analysis.
+Basically, everything is handled by dedicated proof rules which are
+prefixed by “Analyze…”, so you can search in the tree by pressing
+<kbd><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>f</kbd></kbd>, entering
+“Analyze” and jumping from match to match.</p><footer></footer></article></div></div></div><footer class="blog-footer w-100"><nav class="navbar navbar-light bg-light"><p class="w-100 text-center"></p><p class="w-100 text-center"><a href=#></a></p></nav></footer><script src=https://key-project.org/hugo/js/bootstrap.bundle.min.js></script></body></html>

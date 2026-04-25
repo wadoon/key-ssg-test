@@ -1,0 +1,213 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta property="og:title" content="Proving the Correctness of Program Transformations with Abstract Execution and REFINITY"><meta property="og:description" content="Summary. Abstract Execution (AE) is a new program analysis technique for automatically proving second-order properties about programs. It is based on the symbolic execution of abstract programs with second-order symbolic stores.
+Abrupt completion is analyzed in separate SE branches. AE has been successfully applied to show that almost all statement-based Java refactoring techniques are unsound—unless constrained with suitable preconditions. Assuming these preconditions, we automatically proved the transformations correct. With REFINITY, there is now tool support for using AE for your own problems."><meta property="og:type" content="article"><meta property="og:url" content="https://key-project.org/hugo/2019/12/proving-the-correctness-of-program-transformations-with-abstract-execution-and-refinity/"><meta property="article:section" content="news"><meta property="article:published_time" content="2019-12-16T13:48:00+01:00"><meta property="article:modified_time" content="2019-12-16T13:48:00+01:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Proving the Correctness of Program Transformations with Abstract Execution and REFINITY"><meta name=twitter:description content="Summary. Abstract Execution (AE) is a new program analysis technique for automatically proving second-order properties about programs. It is based on the symbolic execution of abstract programs with second-order symbolic stores.
+Abrupt completion is analyzed in separate SE branches. AE has been successfully applied to show that almost all statement-based Java refactoring techniques are unsound—unless constrained with suitable preconditions. Assuming these preconditions, we automatically proved the transformations correct. With REFINITY, there is now tool support for using AE for your own problems."><link rel=canonical href=https://key-project.org/hugo/2019/12/proving-the-correctness-of-program-transformations-with-abstract-execution-and-refinity/><title>Proving the Correctness of Program Transformations with Abstract Execution and REFINITY | KeY Project</title><link rel=stylesheet href=https://key-project.org/hugo/css/bootstrap.min.css><link href=https://key-project.org/hugo/css/style.css rel=stylesheet></head><body><header class=blog-header><nav class="navbar navbar-expand-md navbar-light bg-light"><div class=container-fluid><a class=navbar-brand href=https://key-project.org/hugo/>KeY Project</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNav aria-controls=navbarNav aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-between" id=navbarNav><ul class=navbar-nav><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/news/>News</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/learn/>Learn</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/applications/>Applications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/download/>Download</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/publications/>Publications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/about/>About</a></li></ul></div></div></nav></header><div class=container><div class=row><div class="col-12 col-lg-8 blog-main"><header><h2 class=blog-post-title><a class="text-dark text-decoration-none" href=https://key-project.org/hugo/2019/12/proving-the-correctness-of-program-transformations-with-abstract-execution-and-refinity/>Proving the Correctness of Program Transformations with Abstract Execution and REFINITY</a></h2><div class="blog-post-date text-secondary"><time datetime=2019-12-16>Dec 16, 2019</time>
+<span rel=author>Dominic Steinhöfel</span></div><div class="blog-post-tags text-secondary"><strong>:</strong>
+<a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/tags/tool>Tool</a></div><hr></header><article class=blog-post><p>Summary. <em>Abstract Execution</em> (AE) is a new program analysis technique
+for <em>automatically proving second-order properties</em> about programs. It
+is based on the symbolic <em>execution</em> of <em>abstract</em> programs with
+second-order symbolic stores.</p><p>Abrupt completion is analyzed in separate SE branches. AE has been
+successfully applied to show that almost all statement-based Java
+refactoring techniques are unsound—unless constrained with suitable
+preconditions. Assuming these preconditions, we automatically proved
+the transformations correct. With REFINITY, there is now <em>tool support
+for using AE</em> for your own problems. <em>Program proving</em> makes it
+possible to show the correctness of an <em>individual program</em> for <em>all
+possible inputs</em>. This is a huge advance over testing, as you simply
+cannot miss the one important input that will make your program crash,
+and thus your rocket explode, balance of your savings account get
+negative, or patient die (just to name some classic, “motivating”
+examples). The reason why not everybody is using program proving
+(sometimes also called formal (program) verification) is that <strong>as of
+now, formal verification does not scale</strong> to large systems.</p><h2 id=formal-verification-does-not-scale>Formal Verification Does Not Scale</h2><p>Why is that the case? First, we must not forget that we are talking
+about difficult, frequently <em>undecidable</em> problems. This means that
+certain problems cannot be efficiently solved, i.e., are entirely
+impossible to solve, require human input or simply a huge amount of
+time and space to be processed. Second, formal verification suffers
+heavily from the so-called <em>specification bottleneck</em>. To prove
+a program correct, you first have to define <em>what</em> you actually want
+to prove, in form of, for instance, a pre- and postcondition; for
+actually conducting proofs, you will need additional auxiliary
+specification elements like loop invariants or contracts of (sometimes
+recursive) helper methods. The automatic generation of such auxiliary
+specifications is an active research field, but, in the current state,
+far away from being solved. Even more important: Have you ever used
+a <em>library method</em>, e.g., a sorting method on a List or a simple
+“equals” on a String? Then it is quite possible that you no longer can
+prove your program correct, since there is no specification available
+for that library (and even if the code base for that library is
+available, including (i.e., inlining) all that third-party code in you
+verification process is impractical to infeasible).</p><h2 id=should-we-give-up-well-of-course-not>Should we give up? Well, of course not!</h2><p>Should we therefore give up formal verification, understand that
+testing is our only choice and that we will not be able to use program
+proving in daily life? Well, of course not (What did you think? You’re
+reading an article at key-project.org…)! If you are considering
+sending a rocket to Mars, it can be worth the trouble of verifying the
+safety-critical core of your control software. Additionally, we can
+look around and find applications for our methods that are not
+affected that much of the specification bottleneck. For instance,
+KeY’s <em><a href=https://www.key-project.org/applications/debugging/>Symbolic Execution
+Debugger</a></em> is an
+example where heavyweight symbolic execution is used in a practical
+scenario not relying so much on specifications. Furthermore, instead
+of proving a program correct with respect to a specification (for
+which you need the specification…), you can prove a program correct
+<em>with respect to a program</em>. This research field, called <strong>Relational
+Verification</strong> (because you prove a relation between two programs,
+e.g., equivalence) covers such diverse areas as <em>information flow
+security</em>, (correctness of) <em>compilation</em>, <em>optimization</em>, <em>regression
+verification</em> and <em>program transformation</em>.</p><h2 id=get-more-out-of-our-methods>Get More out of Our Methods</h2><p>Another way to get more out of our methods is to… well, get infinitely
+more out of them! This article is about a technique called <strong>Abstract
+Execution</strong> by which you can prove functional and relational
+properties not just about one (pair of) program(s), but over an
+<em>infinite set</em> of programs matching a certain structure, in other
+words, <em>second-order program properties</em>. Assume that you have
+a program</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=k>if</span> <span class=o>(</span><span class=n>balance</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>reportOldBalance</span><span class=o>(</span><span class=n>balance</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>  <span class=n>balance</span> <span class=o>=</span> <span class=mi>0</span><span class=o>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span> <span class=k>else</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>reportOldBalance</span><span class=o>(</span><span class=n>balance</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>  <span class=n>balance</span> <span class=o>+=</span> <span class=n>bonus</span><span class=o>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><p>which is doing nothing particularly interesting; still, you take the
+time to optimize it be factoring out the common statement of the
+conditional:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=n>reportOldBalance</span><span class=o>(</span><span class=n>balance</span><span class=o>);</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>(</span><span class=n>balance</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>balance</span> <span class=o>=</span> <span class=mi>0</span><span class=o>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span> <span class=k>else</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=n>balance</span> <span class=o>+=</span> <span class=n>bonus</span><span class=o>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><p>Now, instead of specifying a contract for the program and proving the
+program before <em>and</em> after the transformation correct (two proofs),
+you use a relational verification technique and prove equivalence of
+the two versions with a minimal specification in <em>one</em> proof.
+Unfortunately, your proof never finishes since the shown code is
+embedded in a monster method with hundreds of loops and library calls!
+In an alternative wold, you have a stronger computer, which closes the
+proof after two days; however, in the meantime your program changed,
+and you cannot be sure anymore that your proof has any meaning at all.</p><p>Wouldn’t it be nicer to not prove the equivalence of those two programs, but that it, <em>in general</em>, is OK to pull out a statement of a conditional (if certain conditions are met; unfortunately, that technique is <em>not</em> correct in general!), and <em>re-use</em> that result <em>every time you apply that transformation</em>?</p><p>This is what we understand by second-order properties. What you do, instead of proving equivalence of those two programs, is to prove a relational property over to <em>abstract programs</em>:</p><pre tabindex=0><code>if (\abstract_expression boolean e) {
+  \abstract_statement P;
+  \abstract_statement Q1;
+} else {
+  \abstract_statement P;
+  \abstract_statement Q2;
+}
+</code></pre><pre tabindex=0><code>\abstract_statement P;
+if (\abstract_expression boolean e) {
+  \abstract_statement Q1;
+} else { 
+  \abstract_statement Q2; 
+}
+</code></pre><h2 id=abstract-execution-symbolic-execution-of-abstract-programs>Abstract Execution: Symbolic Execution of Abstract Programs</h2><p>“<strong>Abstract Execution</strong>” (AE) is the symbolic <em>execution</em> of
+<em>abstract</em> programs, by which we understand programs with <em>abstract
+statements</em> (like <code>\abstract_statement P;</code>) and <em>abstract expressions</em>
+(like <code>\abstract_expression boolean e</code>). The technique has first been
+presented at FM’19 (see reference at the end of this page) and applied
+to proving the correctness of <em>statement-based refactoring rules</em>. In
+the meantime, AE has evolved. It is now possible to specify abstract
+programs with <em>dynamic frames</em> (the locations that a program may read
+and write are not concrete, like <code>obj.field</code> of <code>x</code>, but abstract
+specification variables like <em>myFrame</em> or <em>footprintOfQ1</em>) and
+arbitrary functional postconditions; also, you can specify expressive
+assumptions about abstract program models, like
+<code>\disjoint(myFrame,yourFootprint)</code> that are considered by the
+(abstract) symbolic execution engine of KeY (with AE extension). For
+instance, the complete model of the abstract program above looks like
+this:</p><pre tabindex=0><code>/*@ ae_constraint \disjoint(frameE, footprintP) &amp;&amp;
+  @               \disjoint(frameP, footprintE) &amp;&amp;
+  @               \disjoint(frameP, frameE) &amp;&amp;
+  @               \disjoint(frameE, relevant) &amp;&amp;
+  @               \disjoint(frameP, relevant) &amp;&amp;
+  @               \mutex(throwsExcE(\value(footprintE)),
+  @                      throwsExcP(\value(footprintP)),
+  @                      returnsP(\value(footprintP)));
+  @*/
+{ ; }
+
+if (
+    /*@ assignable frameE;
+      @ accessible footprintE;
+      @ exceptional_behavior requires throwsExcE(\value(footprintE));
+      @*/
+    \abstract_expression boolean e
+) {
+    /*@ assignable frameP;
+      @ accessible footprintP;
+      @ exceptional_behavior requires throwsExcP(\value(footprintP));
+      @ return_behavior requires returnsP(\value(footprintP));
+      @*/
+    \abstract_statement P;
+    
+    //@ assignable frameQ1;
+    //@ accessible footprintQ1;
+    \abstract_statement Q1;
+}
+else {
+    /*@ assignable frameP;
+      @ accessible footprintP;
+      @ exceptional_behavior requires throwsExcP(\value(footprintP));
+      @ return_behavior requires returnsP(\value(footprintP));
+      @*/
+    \abstract_statement P;
+    
+    //@ assignable frameQ2;
+    //@ accessible footprintQ2;
+    \abstract_statement Q2;
+}
+</code></pre><p>The nice feature is that you can <em>prove the correctness of such
+a program transformation technique <strong>automatically</strong></em>, and obtain
+a strong and reusable result for <em>an infinite number of programs</em>,
+namely all those that satisfy the requirements of the abstract model
+(e.g., <code>\disjoint(frameE,footprintP)</code> states that the guard of the
+conditional may not change the locations on which the abstract
+statement <code>P</code> depends. And yes, this is a possible complication, as
+expressions, such as <code>--x+(z++)>=methodThatChangesTheHeap(--z)</code>, may
+have a number of side effects!). That we can prove such
+transformations automatically is not a given, considering that we are
+talking about a second-order property. Such properties are frequently
+proven in frameworks that require heavy interaction, such as
+interactive theorem provers like Coq and Isabelle—if they are proven
+at all!</p><h2 id=there-exists-tool-support-now-refinity>There Exists Tool Support Now: REFINITY</h2><p>For using Abstract Execution in relational proofs within KeY, there
+exists tool support now: The tool
+<strong><a href=https://www.key-project.org/refinity/>REFINITY</a></strong> allows to
+specify two abstract program fragments together with all needed
+specification variables and a relational pre- and postcondition, and
+automatically translates this to the general KeY input syntax. If your
+model is correct, you can prove its correctness in most cases by
+pushing the “play” button in REFINITY. If it isn’t (and there are so
+many subtleties in program refactoring, or other transformation
+techniques…), you can interact with the KeY proof to find the problem.</p><p><img src=REFINITY.png alt></p><h2 id=the-three-pillars-of-abstract-execution>The Three Pillars of Abstract Execution</h2><p>Theoretically, Abstract Execution builds on three pillars:</p><ol><li><strong>Second-order state changes</strong> based on <em>abstract updates</em>,</li><li>creation of symbols “fresh for” APE identifier symbols, meaning
+that they are created fresh on the first occurrence of an abstract
+program element with an identifier symbol P in a proof context, but
+are re-used every time that an APE with identifier symbol
+P re-occurs,</li><li>creation of <strong>separate SE branches</strong> for <em>all reasons of abrupt
+completion</em> of an abstract program element.</li></ol><p>The most important constituents are <em>abstract updates</em> which represent
+a big number of state changes at once. Concrete updates, like “<code>x := y</code>“, have always been a central part of KeY; with abstract updates
+“<code>frame, x := z, footprint, o.f</code>“, KeY receives their second-order
+counterparts.</p><p>Abstract Execution can not only be used to prove the correctness of
+refactoring techniques. There are planned, or ongoing, collaborations
+with experts from other areas in the directions of</p><ul><li>Correctness-by-Construction</li><li>Cost Analysis</li><li>Program Transformation for Parallelization</li></ul><p>… and more is being contemplated! We ourselves thought into the
+directions of proving the correctness of a rule-based
+compiler—automatically—which has been the original motivation for
+Abstract Execution, and to use AE for “lazy symbolic execution” of
+programs with loops and library calls to mitigate the specification
+bottleneck. There’s a whole, promising world of second-order program
+properties out there that are waiting to be proven!</p><p>If you are interested in the technique, we invite you to read our
+paper and to try out REFINITY. The tool ships with a number of
+examples that hopefully get you started quickly! But never
+underestimate the many pitfalls that are waiting to bite you when you
+are transforming your Java program… You’ve been warned.</p><h2 id=references>References</h2><p>Dominic Steinhöfel, Reiner Hähnle: <a href=https://doi.org/10.1007/978-3-030-30942-8_20>Abstract
+Execution</a>. In: ter
+Beek, Maurice H; McIver, Annabelle; é, Jos (Ed.): Formal Methods - The
+Next 30 Years - Third World Congress, FM 2019, Porto, Portugal,
+October 7-11, 2019, Proceedings, pp. 319–336, Springer, 2019.</p><h2 id=links>Links</h2><ul><li><a href=https://doi.org/10.1007/978-3-030-30942-8_20 title=https://doi.org/10.1007/978-3-030-30942-8_20>https://doi.org/10.1007/978-3-030-30942-8_20</a></li><li><a href=https://dx.doi.org/10.1007/978-3-030-30942-8_20 title="Follow DOI:10.1007/978-3-030-30942-8_20">doi:10.1007/978-3-030-30942-8_20</a></li></ul><footer></footer></article></div><aside class="col-12 col-lg-3 ml-auto blog-sidebar"><section><h4></h4><ol class=list-unstyled><li><a href=https://key-project.org/hugo/2021/12/release-key-2.10/>Release: KeY 2.10</a></li><li><a href=https://key-project.org/hugo/2021/11/we-are-hiring/>We are hiring!</a></li><li><a href=https://key-project.org/hugo/2021/04/proving-line-wrapping-in-key-why3-dafny-and-frama-c/>Proving Line Wrapping in KeY, Why3, Dafny and Frama-C</a></li><li><a href=https://key-project.org/hugo/2021/03/key-tutorial-at-verifythis-2021/>KeY Tutorial at VerifyThis 2021</a></li><li><a href=https://key-project.org/hugo/2021/03/keynote-series/>KeYNote Series</a></li></ol></section><section><h4></h4><p><a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/categories/key-symposium>key-symposium</a>
+<a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/categories/talks>talks</a>
+<a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/categories/uncategorized>uncategorized</a></p><h4></h4><p><a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/tags/announcement>announcement</a>
+<a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/tags/best-paper>best-paper</a>
+<a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/tags/case-study>case-study</a>
+<a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/tags/event>event</a>
+<a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/tags/key-symposium>key-symposium</a>
+<a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/tags/release>release</a>
+<a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/tags/sed>sed</a>
+<a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/tags/talks>talks</a>
+<a class="btn btn-primary btn-small badge" href=https://key-project.org/hugo/tags/tool>tool</a></p></section></aside></div></div><footer class="blog-footer w-100"><nav class="navbar navbar-light bg-light"><p class="w-100 text-center"></p><p class="w-100 text-center"><a href=#></a></p></nav></footer><script src=https://key-project.org/hugo/js/bootstrap.bundle.min.js></script></body></html>

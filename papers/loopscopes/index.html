@@ -1,0 +1,104 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta property="og:title" content="Loop Scope Invariant Rule"><meta property="og:description" content="Contents Complete Statistics Table Complementary Files Loop Scope Invariant Rule State Merging in Loops This page supplies additional material for the paper “A New Invariant Rule for the Analysis of Loops with Non-standard Control Flows“, accepted for iFM 2017.
+The extended technical report based on the iFM submission can be found here. The technical report additionally contains material that we had to leave out in the submission for space reasons."><meta property="og:type" content="article"><meta property="og:url" content="https://key-project.org/hugo/papers/loopscopes/"><meta property="article:section" content="papers"><meta property="article:published_time" content="2017-02-08T10:18:00+01:00"><meta property="article:modified_time" content="2017-02-08T10:18:00+01:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Loop Scope Invariant Rule"><meta name=twitter:description content="Contents Complete Statistics Table Complementary Files Loop Scope Invariant Rule State Merging in Loops This page supplies additional material for the paper “A New Invariant Rule for the Analysis of Loops with Non-standard Control Flows“, accepted for iFM 2017.
+The extended technical report based on the iFM submission can be found here. The technical report additionally contains material that we had to leave out in the submission for space reasons."><link rel=canonical href=https://key-project.org/hugo/papers/loopscopes/><title>Loop Scope Invariant Rule | KeY Project</title><link rel=stylesheet href=https://key-project.org/hugo/css/bootstrap.min.css><link href=https://key-project.org/hugo/css/style.css rel=stylesheet></head><body><header class=blog-header><nav class="navbar navbar-expand-md navbar-light bg-light"><div class=container-fluid><a class=navbar-brand href=https://key-project.org/hugo/>KeY Project</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNav aria-controls=navbarNav aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-between" id=navbarNav><ul class=navbar-nav><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/news/>News</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/learn/>Learn</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/applications/>Applications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/download/>Download</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/publications/>Publications</a></li><li class=nav-item><a class=nav-link href=https://key-project.org/hugo/about/>About</a></li></ul></div></div></nav></header><div class=container><div class=row><div class="col-12 col-lg-8 blog-main"><header><h2 class=blog-post-title><a class="text-dark text-decoration-none" href=https://key-project.org/hugo/papers/loopscopes/>Loop Scope Invariant Rule</a></h2><div class="blog-post-date text-secondary"><time datetime=2017-02-08>Feb 8, 2017</time>
+<span rel=author>Dominic Steinhöfel</span></div><hr></header><article class=blog-post><h5 id=contents>Contents</h5><ul><li><a href=#Complete_Statistics_Table>Complete Statistics Table</a></li><li><a href=#Complementary_Files>Complementary Files</a><ul><li><a href=#Loop_Scope_Invariant_Rule>Loop Scope Invariant Rule</a></li><li><a href=#State_Merging_in_Loops>State Merging in Loops</a></li></ul></li></ul><p>This page supplies additional material for the paper “<em>A New Invariant
+Rule for the Analysis of Loops with Non-standard Control Flows</em>“,
+accepted for iFM 2017.</p><p>The <a href=https://tubiblio.ulb.tu-darmstadt.de/105053/>extended technical
+report</a> based on the iFM
+submission can be found
+<a href=https://tubiblio.ulb.tu-darmstadt.de/105053/>here</a>. The technical
+report additionally contains material that we had to leave out in the
+submission for space reasons.</p><h2 id=complete-statistics-table>Complete Statistics Table</h2><style type=text/css>table#stats-table th{<br /> text-align: center;<br /> border: 0;<br /> padding: 0;<br />}<br />table#stats-table thead{<br /> border-top: 2px solid #ddd;<br /> border-bottom: 1px solid #ddd;<br />}table#stats-table thead tr:first-child th{<br /> padding-top: 8px;<br />}<br />table#stats-table thead tr:last-child th{<br /> padding-bottom: 8px;<br />}<br />table#stats-table td{<br /> text-align: right;<br />}<br />table#stats-table td:first-child{<br /> text-align: left;<br />}<br />table#stats-table .egood{<br /> color: green;<br />}<br />table#stats-table .ebad{<br /> color: red;<br />}<br />table#stats-table .emedium{<br /> color: gray;<br />}<br /></style><table><thead><tr><th>Problem</th><th>Proof Nodes</th><th>% Diff.</th><th>Symb.Ex.Steps</th><th>% Difference</th><th></th><th></th></tr></thead><tbody><tr><td></td><td>Old Rule</td><td>Loop Scope Rule</td><td># Nodes</td><td>Old Rule</td><td>New Rule</td><td># Symb.Ex.Steps</td></tr><tr><td>coincidence_count</td><td>14.199</td><td>50.957</td><td><span class=ebad>258.88</span></td><td>210</td><td>153</td><td><span class=egood>-27.14</span></td></tr><tr><td>ArrayList.remove.1</td><td>12.269</td><td>14.575</td><td><span class=ebad>18.80</span></td><td>258</td><td>191</td><td><span class=egood>-25.97</span></td></tr><tr><td>saddleback_search</td><td>30.119</td><td>32.203</td><td><span class=ebad>6.92</span></td><td>235</td><td>181</td><td><span class=egood>-22.98</span></td></tr><tr><td>list_recursiveSpec</td><td>5.243</td><td>5.557</td><td><span class=ebad>5.99</span></td><td>184</td><td>170</td><td><span class=egood>-7.61</span></td></tr><tr><td>removeDups</td><td>19.891</td><td>19.736</td><td><span class=emedium>-0.78</span></td><td>373</td><td>308</td><td><span class=egood>-17.43</span></td></tr><tr><td>ArrayList_add</td><td>6.451</td><td>6.380</td><td><span class=emedium>-1.10</span></td><td>458</td><td>444</td><td><span class=egood>-3.06</span></td></tr><tr><td>polishFlagSort</td><td>4.299</td><td>4.242</td><td><span class=emedium>-1.33</span></td><td>93</td><td>83</td><td><span class=egood>-10.75</span></td></tr><tr><td>ArrayList_concatenate</td><td>23.205</td><td>22.585</td><td><span class=emedium>-2.67</span></td><td>641</td><td>564</td><td><span class=egood>-12.01</span></td></tr><tr><td>list_recursiveSpec</td><td>6.131</td><td>5.937</td><td><span class=egood>-3.16</span></td><td>216</td><td>184</td><td><span class=egood>-14.81</span></td></tr><tr><td>BinarySearch_search</td><td>4.462</td><td>4.269</td><td><span class=egood>-4.33</span></td><td>182</td><td>149</td><td><span class=egood>-18.13</span></td></tr><tr><td>Simple_square</td><td>840</td><td>794</td><td><span class=egood>-5.48</span></td><td>53</td><td>42</td><td><span class=egood>-20.75</span></td></tr><tr><td>MemoryAllocator_alloc</td><td>1.067</td><td>1.003</td><td><span class=egood>-6.00</span></td><td>90</td><td>77</td><td><span class=egood>-14.44</span></td></tr><tr><td>reverseArray</td><td>5.348</td><td>4.997</td><td><span class=egood>-6.56</span></td><td>151</td><td>139</td><td><span class=egood>-7.95</span></td></tr><tr><td>Node_search</td><td>7.768</td><td>7.256</td><td><span class=egood>-6.59</span></td><td>97</td><td>57</td><td><span class=egood>-41.24</span></td></tr><tr><td>gcdHelp-post</td><td>2.634</td><td>2.456</td><td><span class=egood>-6.76</span></td><td>39</td><td>28</td><td><span class=egood>-28.21</span></td></tr><tr><td>ExampleSubject_addObserver</td><td>4.557</td><td>4.241</td><td><span class=egood>-6.93</span></td><td>168</td><td>133</td><td><span class=egood>-20.83</span></td></tr><tr><td>Queens_isConsistent</td><td>3.677</td><td>3.420</td><td><span class=egood>-6.99</span></td><td>167</td><td>135</td><td><span class=egood>-19.16</span></td></tr><tr><td>ArrayList.enlarge</td><td>3.051</td><td>2.824</td><td><span class=egood>-7.44</span></td><td>106</td><td>79</td><td><span class=egood>-25.47</span></td></tr><tr><td>ArrayList.contains</td><td>2.414</td><td>2.225</td><td><span class=egood>-7.83</span></td><td>98</td><td>60</td><td><span class=egood>-38.78</span></td></tr><tr><td>UpdateAbstraction_ex9_secure</td><td>1.457</td><td>1.319</td><td><span class=egood>-9.47</span></td><td>183</td><td>162</td><td><span class=egood>-11.48</span></td></tr><tr><td>MemoryAllocator_alloc_unsigned</td><td>1.362</td><td>1.232</td><td><span class=egood>-9.54</span></td><td>91</td><td>78</td><td><span class=egood>-14.29</span></td></tr><tr><td>ArrayList_enlarge</td><td>2.764</td><td>2.499</td><td><span class=egood>-9.59</span></td><td>152</td><td>125</td><td><span class=egood>-17.76</span></td></tr><tr><td>arrayMax</td><td>1.921</td><td>1.734</td><td><span class=egood>-9.73</span></td><td>97</td><td>72</td><td><span class=egood>-25.77</span></td></tr><tr><td>arrayFillNonAtomic</td><td>5.376</td><td>4.852</td><td><span class=egood>-9.75</span></td><td>294</td><td>268</td><td><span class=egood>-8.84</span></td></tr><tr><td>ArrayList_enlarge</td><td>3.195</td><td>2.871</td><td><span class=egood>-10.14</span></td><td>157</td><td>130</td><td><span class=egood>-17.20</span></td></tr><tr><td>SumAndMax_sumAndMax</td><td>4.101</td><td>3.676</td><td><span class=egood>-10.36</span></td><td>140</td><td>114</td><td><span class=egood>-18.57</span></td></tr><tr><td>ArrayList.add</td><td>2.302</td><td>2.060</td><td><span class=egood>-10.51</span></td><td>144</td><td>131</td><td><span class=egood>-9.03</span></td></tr><tr><td>LinkedList_get_normal</td><td>6.889</td><td>6.160</td><td><span class=egood>-10.58</span></td><td>184</td><td>159</td><td><span class=egood>-13.59</span></td></tr><tr><td>segsum</td><td>822</td><td>727</td><td><span class=egood>-11.56</span></td><td>64</td><td>51</td><td><span class=egood>-20.31</span></td></tr><tr><td>removeDups_arrayPart</td><td>1.735</td><td>1.533</td><td><span class=egood>-11.64</span></td><td>102</td><td>89</td><td><span class=egood>-12.75</span></td></tr><tr><td>reverseArray2</td><td>2.224</td><td>1.964</td><td><span class=egood>-11.69</span></td><td>134</td><td>110</td><td><span class=egood>-17.91</span></td></tr><tr><td>selection_sort</td><td>5.512</td><td>4.829</td><td><span class=egood>-12.39</span></td><td>278</td><td>205</td><td><span class=egood>-26.26</span></td></tr><tr><td>ArrayList.remFirst</td><td>2.485</td><td>2.175</td><td><span class=egood>-12.47</span></td><td>168</td><td>133</td><td><span class=egood>-20.83</span></td></tr><tr><td>loop2</td><td>1.032</td><td>892</td><td><span class=egood>-13.57</span></td><td>83</td><td>57</td><td><span class=egood>-31.33</span></td></tr><tr><td>AddAndMultiply_add</td><td>1.351</td><td>1.165</td><td><span class=egood>-13.77</span></td><td>109</td><td>83</td><td><span class=egood>-23.85</span></td></tr><tr><td>oldForParams</td><td>544</td><td>469</td><td><span class=egood>-13.79</span></td><td>48</td><td>37</td><td><span class=egood>-22.92</span></td></tr><tr><td>cubicSum</td><td>909</td><td>775</td><td><span class=egood>-14.74</span></td><td>64</td><td>53</td><td><span class=egood>-17.19</span></td></tr><tr><td>permissions_method3</td><td>1.656</td><td>1.401</td><td><span class=egood>-15.40</span></td><td>91</td><td>57</td><td><span class=egood>-37.36</span></td></tr><tr><td>contains</td><td>1.021</td><td>863</td><td><span class=egood>-15.48</span></td><td>73</td><td>49</td><td><span class=egood>-32.88</span></td></tr><tr><td>sum0</td><td>769</td><td>646</td><td><span class=egood>-15.99</span></td><td>85</td><td>58</td><td><span class=egood>-31.76</span></td></tr><tr><td>project</td><td>6.137</td><td>5.088</td><td><span class=egood>-17.09</span></td><td>433</td><td>293</td><td><span class=egood>-32.33</span></td></tr><tr><td>for_ReferenceArray</td><td>664</td><td>550</td><td><span class=egood>-17.17</span></td><td>70</td><td>44</td><td><span class=egood>-37.14</span></td></tr><tr><td>for_Array</td><td>827</td><td>684</td><td><span class=egood>-17.29</span></td><td>95</td><td>68</td><td><span class=egood>-28.42</span></td></tr><tr><td>ArrayList_get</td><td>1.830</td><td>1.496</td><td><span class=egood>-18.25</span></td><td>157</td><td>121</td><td><span class=egood>-22.93</span></td></tr><tr><td>loopInvFree</td><td>403</td><td>329</td><td><span class=egood>-18.36</span></td><td>56</td><td>44</td><td><span class=egood>-21.43</span></td></tr><tr><td>sum2</td><td>785</td><td>631</td><td><span class=egood>-19.62</span></td><td>100</td><td>58</td><td><span class=egood>-42.00</span></td></tr><tr><td>sum1</td><td>939</td><td>753</td><td><span class=egood>-19.81</span></td><td>85</td><td>58</td><td><span class=egood>-31.76</span></td></tr><tr><td>sum3</td><td>820</td><td>646</td><td><span class=egood>-21.22</span></td><td>100</td><td>58</td><td><span class=egood>-42.00</span></td></tr><tr><td>ArrayList_contains_dep</td><td>6.069</td><td>4.393</td><td><span class=egood>-27.62</span></td><td>396</td><td>213</td><td><span class=egood>-46.21</span></td></tr><tr><td>ArrayList.remove.0</td><td>3.689</td><td>2.473</td><td><span class=egood>-32.96</span></td><td>186</td><td>69</td><td><span class=egood>-62.90</span></td></tr><tr><td>jml-information-flow</td><td>48.215</td><td>31.659</td><td><span class=egood>-34.34</span></td><td>474</td><td>369</td><td><span class=egood>-22.15</span></td></tr><tr><td>Simple_unnecessaryLoopInvariant</td><td>110</td><td>71</td><td><span class=egood>-35.45</span></td><td>27</td><td>13</td><td><span class=egood>-51.85</span></td></tr><tr><td>lcp</td><td>3.132</td><td>1.927</td><td><span class=egood>-38.47</span></td><td>235</td><td>104</td><td><span class=egood>-55.74</span></td></tr><tr><td>for_Iterable</td><td>622</td><td>300</td><td><span class=egood>-51.77</span></td><td>130</td><td>58</td><td><span class=egood>-55.38</span></td></tr></tbody></table><h2 id=complementary-files>Complementary Files</h2><p>Below you find the versions of KeY needed to reproduce the examples
+mentioned in the paper, as well as the problem (<code>.key</code>) and proof
+(<code>.proof</code>) files representing the examples. You can download the KeY
+versions using the green buttons. After downloading and unzipping the
+linked files, start KeY by running <code>java -jar KeY.jar</code> in the newly
+created directory. A Java Runtime Environment of version 8 or higher
+is required to start the KeY versions linked on this page. <strong>If a file
+won’t load, please check that there has not been an absolute directory
+path accidentally left over</strong> (<code>.key</code> and <code>.proof</code> files are plain
+text files, just open them with an editor if there is a problem). <em>If
+you have questions regarding or problems with running KeY or loading
+the provided examples, please feel free to contact “steinhoefel (a-t)
+cs.tu-darmstadt.de” .</em>### <span id=Loop_Scope_Invariant_Rule>Loop
+Scope Invariant Rule</span></p><p>Below you find the KeY version including the loop scope invariant
+rule, as well as the examples mentioned in the paper, once for the old
+and once for the new rule. When loading an existing <code>.proof</code> (or
+<code>.key</code>) file, the information about which invariant rule to use is
+already encoded in the file header. Otherwise, you can switch between
+the invariant rules by setting the desired value for “Loop treatment”
+in the “Proof Search Strategy” tab of KeY. Please use the
+corresponding KeY versions when loading <code>.proof</code> files for the
+examples with the old and the new rule.</p><ul><li><a href=https://key-project.org/hugo/material/loopscopes/key-2.7_loopScopeInvRule.zip>KeY version with the Loop Scope Invariant Rule</a></li><li><a href=https://key-project.org/hugo/material/loopscopes/key-2.7_oldInvRule.zip>KeY version with the old invariant rule</a></li><li><a href=https://key-project.org/hugo/material/loopscopes/loopScopeExamples.zip>KeY input files for the new rule</a></li><li><a href=https://key-project.org/hugo/material/loopscopes/oldInvRuleExamples.zip>KeY input files for the old rule</a></li></ul><p>The archives with example files may contain more files than actually
+referenced in the paper. The <code>.proof</code> files relevant for the paper
+are: ```</p><pre tabindex=0><code>/heap/block_contracts/Simple__unnecessaryLoopInvariant.key.proof
+/heap/coincidence_count/project.key.proof
+/heap/comprehensions/bprodSplit.key.proof
+/heap/comprehensions/segsum.key.proof
+/heap/comprehensions/sum0.key.proof
+/heap/comprehensions/sum1.key.proof
+/heap/comprehensions/sum2.key.proof
+/heap/comprehensions/sum3.key.proof
+/heap/fm12_01_LRS/lcp.key.proof
+/heap/javacard/arrayFillNonAtomic.key.proof
+/heap/list/ArrayList_concatenate.key.proof
+/heap/list/ArrayList_contains_dep.key.proof
+/heap/list/ArrayList_enlarge.key.proof
+/heap/list_ghost/ArrayList_enlarge.key.proof
+/heap/list/LinkedList_get_normal.key.proof
+/heap/list_recursiveSpec/ListOperationsNonNull_getNextNN_normal_behavior.key.proof
+/heap/list_recursiveSpec/ListOperationsNonNull_setValueAt_normal_behavior.key.proof
+/heap/list_seq/ArrayList.contains.key.proof
+/heap/list_seq/ArrayList.enlarge.key.proof
+/heap/list_seq/ArrayList.remove.0.key.proof
+/heap/list_seq/ArrayList.remove.1.key.proof
+/heap/observer/ExampleSubject_addObserver.key.proof
+/heap/permissions/permissions_method3.key.proof
+/heap/removeDups/arrayPart.key.proof
+/heap/removeDups/contains.key.proof
+/heap/removeDups/removeDup.key.proof
+/heap/saddleback_search/Saddleback_search.key.proof
+/heap/SemanticSlicing/project.key.proof
+/heap/simple/loop2.key.proof
+/heap/simple/oldForParams.key.proof
+/heap/simple/selection_sort.key.proof
+/heap/SmansEtAl/ArrayList_add.key.proof
+/heap/vacid0_01_SparseArray/MemoryAllocator_alloc.key.proof
+/heap/vacid0_01_SparseArray/MemoryAllocator_alloc_unsigned.key.proof
+/heap/vstte10_01_SumAndMax/SumAndMax_sumAndMax.key.proof
+/heap/vstte10_03_LinkedList/Node_search.key.proof
+/heap/vstte10_04_Queens/Queens_isConsistent.key.proof
+/heap/WeideEtAl_01_AddAndMultiply/AddAndMultiply_add.key.proof
+/heap/WeideEtAl_02_BinarySearch/BinarySearch_search.key.proof
+/newBook/09.list_modelfield/ArrayList.add.key.proof
+/newBook/09.list_modelfield/ArrayList.remFirst.key.proof
+/standard_key/arith/cubicSum.key.proof
+/standard_key/arith/euclidean/gcdHelp-post.key.proof
+/standard_key/arith/gemplusDecimal/add.key.proof
+/standard_key/java_dl/arrayMax.key.proof
+/standard_key/java_dl/java5/for_Array.key.proof
+/standard_key/java_dl/java5/for_Iterable.key.proof
+/standard_key/java_dl/java5/for_ReferenceArray.key.proof
+/standard_key/java_dl/jml-free/loopInvFree.key.proof
+/standard_key/java_dl/jml-information-flow.key.proof
+/standard_key/java_dl/polishFlagSort.key.proof
+/standard_key/java_dl/reverseArray2.key.proof
+/standard_key/java_dl/reverseArray.key.proof
+</code></pre><p>For the manually improved outlier proofs discussed in the paper, the
+additionally relevant files are
+<code>/heap/coincidence_count/project.key.manually-optimized.proof</code> (in the
+archive with files for the new rule) and
+<code>./standard_key/java_dl/jml-information-flow.key.manually-improved.proof</code>
+(in the archive for the old rule). ### <span id=State_Merging_in_Loops>State Merging in Loops</span></p><p>Below you find the KeY version which additionally includes an
+(experimental) implementation of the discussed state merging approach
+for loops. There is a “Taclet Option” for setting this technique on or
+off; it’s accessible by “Options” > “Taclet Options” >
+“mergeAfterLoopScope”. When loading an existing <code>.key</code> or <code>.proof</code>
+file, the option is set according to the specification in the file.
+The examples contain several <code>.key</code> files for starting from scratch
+with the “partially unrolled find” method discussed in the paper based
+on different settinsg, as well as finished <code>.proof</code> files.</p><ul><li><p><a href=https://key-project.org/hugo/material/loopscopes/key-2.7_loopScopeInvRule-StateMerging.zip>KeY version for state merging in
+loops</a></p></li><li><p><a href=https://key-project.org/hugo/material/loopscopes/LoopScopeInvRule-StateMerging-ProofsAndKeYFiles.zip>KeY input files for state
+merging</a></p></li></ul><footer></footer></article></div></div></div><footer class="blog-footer w-100"><nav class="navbar navbar-light bg-light"><p class="w-100 text-center"></p><p class="w-100 text-center"><a href=#></a></p></nav></footer><script src=https://key-project.org/hugo/js/bootstrap.bundle.min.js></script></body></html>
