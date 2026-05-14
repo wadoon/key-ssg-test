@@ -1,4 +1,4 @@
-baseurl = "https://key-project.org/"
+baseurl = "/"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
@@ -18,8 +18,7 @@ pygmentCodeFences = true
 
 
 [permalinks]
-  news = '/:year/:month/:title/'
-
+  news = '/:year-:month-:title/'
 
 [Params]
   subtitle = "Deductive Verification for Java Programs"
@@ -122,14 +121,6 @@ show_sidebar = true
     url = "/learn/"
     weight = 5
 
-# [[menu.main]]
-#     parent="learn"
-#     name = "Documentation"
-#     url = "https://key-project.org/docs/"
-#     weight = 90
-
-
-
 [[menu.main]]
     name = "Applications"
     url = "/applications/"
@@ -139,7 +130,6 @@ show_sidebar = true
     name = "Download"
     url = "/download/"
     weight = 20
-
 
 #[[menu.main]]
 #    name = "KeY Book"
