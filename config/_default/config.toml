@@ -1,4 +1,4 @@
-baseurl = "https://key-project.org/hugo/"
+baseurl = "https://key-project.org/"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"

@@ -1,5 +1,5 @@
 ---
-date: '2016-08-02 11:48 AM'
+date: '08 Feb 2016'
 title: '15th KeY Symposium 2016'
 ---
 
