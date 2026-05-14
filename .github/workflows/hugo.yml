@@ -34,11 +34,11 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.119.0'
+          hugo-version: '0.161.1'
           extended: true
 
       - name: Build
-        run: hugo --minify
+        run: hugo --minify -b https://wadoon.github.io/key-ssg-test/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
